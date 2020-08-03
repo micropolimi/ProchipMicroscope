@@ -1,0 +1,21 @@
+2020-07-29T14:57:01|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\measurement.py", line 244, in start_stop
+    self._start()
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\measurement.py", line 140, in _start
+    self.pre_run()
+  File "C:\LabPrograms\Python\PROCHIP_Microscope\PROCHIP_Measurement_cell_detection.py", line 104, in pre_run
+    self.ui_plots0 = load_qt_ui_file(self.ui_filename_plots0)
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\helper_funcs.py", line 64, in load_qt_ui_file
+    ui = uic.loadUi(ui_filename)
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\PyQt5\uic\__init__.py", line 226, in loadUi
+    return DynamicUILoader(package).loadUi(uifile, baseinstance, resource_suffix)
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\PyQt5\uic\Loader\loader.py", line 72, in loadUi
+    return self.parse(filename, resource_suffix, basedir)
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\PyQt5\uic\uiparser.py", line 1013, in parse
+    document = parse(filename)
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\xml\etree\ElementTree.py", line 1202, in parse
+    tree.parse(source, parser)
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\xml\etree\ElementTree.py", line 584, in parse
+    source = open(source, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\LabPrograms\\Python\\PROCHIP_Microscope\\channel0.ui'
+

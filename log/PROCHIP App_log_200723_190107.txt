@@ -1,0 +1,11 @@
+2020-07-23T19:01:50|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\ScopeFoundry\measurement.py", line 25, in run
+    self.measurement._thread_run()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\ScopeFoundry\measurement.py", line 179, in _thread_run
+    self.run()
+  File "C:\LabPrograms\Python\DAQ_Laser_Camera\PROCHIP_Measurement_cell_detection.py", line 185, in run
+    self.im.find_cell(self.im.img8bit0)
+  File "C:\LabPrograms\Python\DAQ_Laser_Camera\image_data.py", line 58, in find_cell
+    if M['m00'] >  int(self.minCellSize):
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'LoggedQuantity'
+

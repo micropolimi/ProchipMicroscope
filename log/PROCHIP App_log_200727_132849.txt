@@ -1,0 +1,697 @@
+2020-07-27T13:29:16|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:16|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:16|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:16|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:16|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:16|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:16|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:16|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:16|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:16|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:16|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:16|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:16|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:16|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:16|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:16|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:16|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:16|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:16|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:17|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:17|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:17|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:17|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:17|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:17|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:17|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:17|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:17|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:17|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:17|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:17|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:17|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:17|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:17|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:17|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:17|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:17|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:17|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:17|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:17|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:17|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:18|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:18|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:18|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:18|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:18|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:18|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:18|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:18|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:18|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:18|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:18|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:18|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:18|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:18|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:18|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:18|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:18|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:18|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:18|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:18|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:18|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:18|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:19|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:19|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:19|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:19|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:19|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:19|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:19|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:19|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:19|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:19|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:19|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:19|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:19|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:19|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:19|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:19|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:19|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:19|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:19|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:19|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:20|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:20|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:20|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:20|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:20|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:20|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:20|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:20|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:20|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:20|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:20|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:20|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:20|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:20|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:20|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:20|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:20|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:20|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:20|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:20|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:21|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:21|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:21|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:21|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:21|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:21|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:21|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:21|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:21|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:21|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:21|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:21|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:21|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:21|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:21|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:21|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:21|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:21|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:21|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:21|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:21|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:21|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:22|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:22|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:22|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:22|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:22|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\ScopeFoundry\measurement.py", line 25, in run
+    self.measurement._thread_run()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\ScopeFoundry\measurement.py", line 179, in _thread_run
+    self.run()
+  File "C:\LabPrograms\Python\DAQ_Laser_Camera\PROCHIP_Measurement_cell_detection.py", line 183, in run
+    self.im.create8bitimages()
+  File "C:\LabPrograms\Python\DAQ_Laser_Camera\image_data.py", line 25, in create8bitimages
+    self.img8bit1 = (self.image1/256).astype('uint8')
+AttributeError: 'image_data' object has no attribute 'image1'
+
+2020-07-27T13:29:22|ERROR|PROCHIP_Measurement|PROCHIP_Measurement Failed to update figure1: 'image_data' object has no attribute 'image1'. ['Traceback (most recent call last):\n', '  File "C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ScopeFoundry\\measurement.py", line 273, in _on_display_update_timer\n    self.update_display()\n', '  File "C:\\LabPrograms\\Python\\DAQ_Laser_Camera\\PROCHIP_Measurement_cell_detection.py", line 277, in update_display\n    level_min_1 = np.amin(self.im.image1)\n', "AttributeError: 'image_data' object has no attribute 'image1'\n"]
+2020-07-27T13:29:22|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:22|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:26|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T13:29:28|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+

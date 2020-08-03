@@ -1,0 +1,11 @@
+2020-07-20T17:15:31|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\ScopeFoundry\hardware.py", line 208, in enable_connection
+    raise err
+  File "C:\ProgramData\Anaconda3\lib\site-packages\ScopeFoundry\hardware.py", line 204, in enable_connection
+    self.connect()
+  File "C:\LabPrograms\Python\ElveflowScopeFoundry\ElveflowHardware.py", line 55, in connect
+    calibration_kind = "default")
+  File "C:\LabPrograms\Python\ElveflowScopeFoundry\ElveflowDevice.py", line 84, in __init__
+    self.calibrate(kind = new,
+NameError: name 'new' is not defined
+

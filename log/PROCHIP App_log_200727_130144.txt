@@ -1,0 +1,9 @@
+2020-07-27T13:01:47|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\LabPrograms\Python\DAQ_Laser_Camera\Laser_DAQ_Camera_App.py", line 71, in <module>
+    hc.connect()
+  File "C:\LabPrograms\Python\Hamamatsu_ScopeFoundry\CameraHardware.py", line 115, in connect
+    binning = self.binning.val, hardware = self) #maybe with more cameras we have to change
+  File "C:\LabPrograms\Python\Hamamatsu_ScopeFoundry\CameraDevice.py", line 385, in __init__
+    self.max_width = self.getPropertyValue("image_width")[0]
+TypeError: 'bool' object is not subscriptable
+

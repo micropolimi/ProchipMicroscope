@@ -1,0 +1,1917 @@
+2020-07-27T12:38:12|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:12|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:12|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:12|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:12|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:12|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:12|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:12|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:13|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:13|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:13|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:13|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:13|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:13|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:13|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:13|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:13|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:13|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:13|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:13|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:13|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:13|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:13|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:13|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:13|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:13|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:13|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:13|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:14|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:14|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:14|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:14|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:14|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:14|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:14|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:14|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:14|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:14|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:14|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:14|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:14|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:14|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:14|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:14|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:14|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:14|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:14|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:14|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:14|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:14|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:15|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:15|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:15|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:15|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:15|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:15|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:15|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:15|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:15|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:15|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:15|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:15|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:15|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:15|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:15|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:15|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:15|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:15|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:15|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:15|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:15|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:15|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:16|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:16|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:16|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:16|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:16|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:16|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:16|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:16|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:16|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:16|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:16|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:16|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:16|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:16|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:16|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:16|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:16|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:16|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:16|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:16|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:17|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:17|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:17|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:17|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:17|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:17|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:17|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:17|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:17|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:17|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:17|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:17|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:17|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:17|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:17|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:17|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:17|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:17|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:17|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:17|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:17|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:17|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:18|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:18|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:18|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:18|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:18|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:18|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:18|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:18|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:18|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:18|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:18|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:18|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:18|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:18|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:18|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:18|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:18|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:18|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:18|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:18|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:18|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:18|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:19|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:19|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:19|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:19|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:19|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:19|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:19|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:19|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:19|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:19|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:19|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:19|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:19|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:19|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:19|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:19|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:19|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:19|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:19|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:19|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:20|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:20|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:20|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:20|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:20|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:20|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:20|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:20|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:20|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:20|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:20|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:20|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:20|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:20|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:20|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:20|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:20|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:20|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:20|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:20|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:20|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:20|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:21|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:21|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:21|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:21|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:21|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:21|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:21|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:21|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:21|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:21|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:21|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:21|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:21|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:21|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:21|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:21|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:21|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:21|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:21|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:21|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:21|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:21|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:22|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:22|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:22|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:22|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:22|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:22|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:22|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:22|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:22|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:22|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:22|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:38:22|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+
+2020-07-27T12:39:48|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 411, in paint
+    self.render()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 403, in render
+    argb, alpha = fn.makeARGB(image, lut=lut, levels=levels)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pyqtgraph\functions.py", line 1050, in makeARGB
+    imgData[..., i] = data[..., order[i]]
+ValueError: could not broadcast input array from shape (700,512,3) into shape (700,512)
+

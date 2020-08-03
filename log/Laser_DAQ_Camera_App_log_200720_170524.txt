@@ -1,0 +1,9 @@
+2020-07-20T17:05:29|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\ScopeFoundry\hardware.py", line 208, in enable_connection
+    raise err
+  File "C:\ProgramData\Anaconda3\lib\site-packages\ScopeFoundry\hardware.py", line 204, in enable_connection
+    self.connect()
+  File "C:\LabPrograms\Python\ElveflowScopeFoundry\ElveflowHardware.py", line 64, in connect
+    self.get_pressure_1.hardware_read_func = self.getPressure1
+AttributeError: 'ElveflowHardware' object has no attribute 'get_pressure_1'
+

@@ -1,0 +1,11 @@
+2020-07-23T14:55:49|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\LabPrograms\Python\DAQ_Laser_Camera\Laser_DAQ_Camera_App.py", line 52, in <module>
+    app = Laser_DAQ_Camera_App(sys.argv)
+  File "C:\LabPrograms\Python\BaseMicroscopeModified_ScopeFoundry\BaseMicroscopeAppModified.py", line 16, in __init__
+    super().__init__(*kwds) # *kwds is needed since in the main we pass as argument sys.argv. Without
+  File "C:\ProgramData\Anaconda3\lib\site-packages\ScopeFoundry\base_app.py", line 332, in __init__
+    self.setup()
+  File "C:\LabPrograms\Python\DAQ_Laser_Camera\Laser_DAQ_Camera_App.py", line 29, in setup
+    self.add_measurement(PROCHIP_Measurement_cell_recognition(self))
+TypeError: 'module' object is not callable
+

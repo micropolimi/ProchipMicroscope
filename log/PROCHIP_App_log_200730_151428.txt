@@ -1,0 +1,18 @@
+2020-07-30T15:16:41|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\measurement.py", line 25, in run
+    self.measurement._thread_run()
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\measurement.py", line 179, in _thread_run
+    self.run()
+  File "C:\LabPrograms\Python\PROCHIP_Microscope\PROCHIP_Measurement_cell_detection.py", line 190, in run
+    self.roi_h5_dataset(roi_index, channel_index)
+  File "C:\LabPrograms\Python\PROCHIP_Microscope\PROCHIP_Measurement_cell_detection.py", line 565, in roi_h5_dataset
+    self.roi_h5 = self.h5_roi_group.create_dataset( name  = name,
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\h5py\_hl\group.py", line 139, in create_dataset
+    self[name] = dset
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\h5py\_hl\group.py", line 373, in __setitem__
+    h5o.link(obj.id, self.id, name, lcpl=lcpl, lapl=self._lapl)
+  File "h5py\_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py\_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py\h5o.pyx", line 202, in h5py.h5o.link
+RuntimeError: Unable to create link (name already exists)
+
