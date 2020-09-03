@@ -1,6 +1,4 @@
-from BaseMicroscopeModified_ScopeFoundry.BaseMicroscopeAppModified import BaseMicroscopeAppModified
 from ScopeFoundry import BaseMicroscopeApp
-import time
 
 
 
@@ -11,9 +9,9 @@ class PROCHIP_App(BaseMicroscopeApp):
     def setup(self):
         
         from Hamamatsu_ScopeFoundry.CameraHardware import HamamatsuHardware
-        from laser.laser_hardware import LaserHW
-        from nidaqmx_test.ni_do_hardware import NI_DO_hw
-        from nidaqmx_test.ni_co_hardware import NI_CO_hw
+        from OBIS_ScopeFoundry.laser_hardware import LaserHW
+        from NIdaqmx_ScopeFoundry.ni_do_hardware import NI_DO_hw
+        from NIdaqmx_ScopeFoundry.ni_co_hardware import NI_CO_hw
 
         self.add_hardware(HamamatsuHardware(self))
         self.add_hardware(LaserHW(self, name='Laser_0'))

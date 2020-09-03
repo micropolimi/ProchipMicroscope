@@ -157,6 +157,7 @@ class PROCHIP_Measurement(Measurement):
                     self.im.image[channel_index] = np.reshape(self.np_data, (eff_subarrayv, eff_subarrayh))
                     
                     # detect all the cells present in this frame (do it only on the selected channel and not both)
+                    #if channel_index == self.settings.selected_channel.val:
                     self.im.find_cell(self.settings.selected_channel.val)
                      
                     if self.settings['save_roi_h5']:
