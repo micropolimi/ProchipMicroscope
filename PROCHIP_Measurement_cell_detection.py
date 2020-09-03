@@ -1,30 +1,26 @@
 from __future__ import division
 from ScopeFoundry import Measurement
-#from Hamamatsu_ScopeFoundry.CameraMeasurement import HamamatsuMeasurement
 from ScopeFoundry.helper_funcs import sibling_path, load_qt_ui_file
-#from SyncreadoutTriggerMeasurement_dvp import SyncReadOutMeasurement
 from ScopeFoundry import h5_io
 import pyqtgraph as pg
 import numpy as np
 import os
 import time
-from datetime import datetime
-from PROCHIP_Microscope.image_data import image_data
+from PROCHIP_Microscope.image_data import ImageManager
+
 
 class PROCHIP_Measurement(Measurement):
     
-    name = "PROCHIP_Measurement"
+    name = "PROCHIP"    #PROCHIP_Measurement
     
     def setup(self):
         
         "..." 
 
         self.ui_filename = sibling_path(__file__, "DualColor.ui")
-        
-        print(self.ui_filename)
-
-
         self.ui = load_qt_ui_file(self.ui_filename)
+        
+        # settings creation
         self.settings.New('refresh_period', dtype=float, unit='s', spinbox_decimals = 4, initial=0.08, vmin = 0 ,vmax=10)
         self.settings.New('auto_range_0', dtype=bool, initial=True)
         self.settings.New('auto_levels_0', dtype=bool, initial=True)
@@ -41,6 +37,11 @@ class PROCHIP_Measurement(Measurement):
         self.settings.New('selected_channel', dtype=int, initial=0, vmin = 0, vmax = 1)
         self.settings.New('captured_cells', dtype=int, initial=0)
         
+        self.settings.New('acq_freq', dtype=float, unit='Hz', initial=200)
+        self.settings.New('xsampling', dtype=float, unit='um', initial=0.11)
+        self.settings.New('ysampling', dtype=float, unit='um', initial=0.11)
+        self.settings.New('zsampling', dtype=float, unit='um', initial=1.0)
+        
         
         self.camera = self.app.hardware['HamamatsuHardware']
         
@@ -52,15 +53,8 @@ class PROCHIP_Measurement(Measurement):
         self.ni_co_1 = self.app.hardware['Counter_Output_1']
         self.ni_do_0 = self.app.hardware['Digital_Output_0']
         
-        self.settings.New('acq_freq', dtype=float, unit='Hz', initial=200)
-        self.settings.New('xsampling', dtype=float, unit='um', initial=0.11)
-        self.settings.New('ysampling', dtype=float, unit='um', initial=0.11)
-        self.settings.New('zsampling', dtype=float, unit='um', initial=1.0)
-        
-        self.app.settings.data_fname_format.val = '{timestamp:%y%m%d_%H%M%S}_{sample}_{measurement.name}.{ext}'
-        self.app.settings.sample.val = 'sample'
-        
         self.channels = [0,1]
+        
         
           
     def setup_figure(self):
@@ -71,7 +65,6 @@ class PROCHIP_Measurement(Measurement):
         """
                 
         # connect ui widgets to measurement/hardware settings or functions
-        
         self.ui.start_pushButton.clicked.connect(self.start)
         self.ui.interrupt_pushButton.clicked.connect(self.interrupt)
         self.settings.save_h5.connect_to_widget(self.ui.save_h5_checkBox)
@@ -92,9 +85,10 @@ class PROCHIP_Measurement(Measurement):
         self.settings.captured_cells.connect_to_widget(self.ui.captured_doubleSpinBox) 
         
         
+        
     def pre_run(self):    
         '''
-        Initialization of the image_data class and figures
+        Initialization of the ImageManager class and of figures
         '''
         
         self.display_update_period = self.settings.refresh_period.val
@@ -102,23 +96,19 @@ class PROCHIP_Measurement(Measurement):
         eff_subarrayh = self.eff_subarrayh = int(self.camera.subarrayh.val/self.camera.binning.val)
         eff_subarrayv = self.eff_subarrayv = int(self.camera.subarrayv.val/self.camera.binning.val)
                 
-        self.im = image_data(eff_subarrayh,
+        self.im = ImageManager(eff_subarrayh,
                              eff_subarrayv, 
                              self.settings.roi_half_side.val,
                              self.settings.min_cell_size.val
                              )
         
-
-        
-        #if not hasattr(self, "imv0"):     
         plot0 = pg.PlotItem(title="channel0")
         self.imv0 = pg.ImageView(view = plot0)
         self.imv0.ui.histogram.hide()
         self.imv0.ui.roiBtn.hide()
         self.imv0.ui.menuBtn.hide()
         self.imv0.show()
-            
-        #if not hasattr(self, "imv1"):
+       
         plot1 = pg.PlotItem(title="channel1")
         self.imv1 = pg.ImageView(view = plot1)
         self.imv1.ui.histogram.hide()
@@ -127,6 +117,8 @@ class PROCHIP_Measurement(Measurement):
         self.imv1.show()
         
         self.settings['captured_cells'] = 0
+    
+    
     
     def run(self):
         
@@ -140,59 +132,64 @@ class PROCHIP_Measurement(Measurement):
             
             self.start_triggered_Acquisition(freq1)
             
-            first_cycle = True
+            first_cycle = True    # it will become False when the roi_h5_file will be created
                         
-            z_index = [0]*len(self.channels) #list of z indexes, in which each element is the z index corresponding to a different channel
-                        
-            roi_index = 0
-            num_rois = 0
-            active_rois = 0
-        
-            self.roi_h5 = []
+            z_index_roi = [0]*len(self.channels)    # list of z indexes in which each element is the z index corresponding to a different channel
+            roi_index = 0      # absolute index of rois
+            num_rois = 0       # number of rois detected in the current image
+            active_rois = 0    # number of rois detected in the previous image
+            self.roi_h5 = []      # content to be saved in the roi_h5_file
             
-            while not self.interrupt_measurement_called:
+            self.image_h5 = [None]*len(self.channels)    # prepare list to contain the image data to be saved in the h5file
             
-                
+            
+            while not self.interrupt_measurement_called:    # "run till abort" mode
+            
                 [frames, _dims] = self.camera.hamamatsu.getFrames()
                 
+                # processing of each acquired image
                 for frame_index, frame in enumerate(frames):
                     
-                    if (self.camera.hamamatsu.buffer_index - self.camera.hamamatsu.backlog + frame_index+1) % 2 == 0:
-                        channel_index = 0
-                    else:
-                        channel_index = 1
- 
+                    # define the correct channel in use for cells detection
+                    channel_index = (self.camera.hamamatsu.buffer_index - self.camera.hamamatsu.backlog + frame_index + 1) % 2
+                    
                     self.np_data = frame.getData()
-                        
                     self.im.image[channel_index] = np.reshape(self.np_data, (eff_subarrayv, eff_subarrayh))
                     
+                    # detect all the cells present in this frame (do it only on the selected channel and not both)
                     self.im.find_cell(self.settings.selected_channel.val)
-                        
-                    
+                     
                     if self.settings['save_roi_h5']:
                         
                         num_rois = len(self.im.contour)   
                         
+                        # create and initialize the roi h5 file if it does not exist yet
                         if first_cycle:
                             self.init_roi_h5()
                             first_cycle = False
                         
+                        # create a roi for each cell in the frame
                         rois = self.im.roi_creation(channel_index)
                             
                         for i, roi in enumerate(rois):
                             
+                            # create a new dataset if we are dealing with a new cell
                             self.roi_h5_dataset(roi_index, channel_index)
                             
-                            if z_index[channel_index] != 0:
+                            # dynamically increment the dimension of the "box" in which we are going to put a new roi image
+                            if z_index_roi[channel_index] != 0:
+                                
                                 self.roi_h5[channel_index].resize(self.roi_h5[channel_index].shape[0]+1, axis = 0)
                             
-                            self.roi_h5[channel_index][z_index[channel_index], :, :] = roi
-                            self.h5_roi_file.flush()
-                            z_index[channel_index] += 1
+                            self.roi_h5[channel_index][z_index_roi[channel_index], :, :] = roi
+                            self.h5_roi_file.flush()    # this allow us to open the h5 file also while it is not completely created yet
+                            z_index_roi[channel_index] += 1
                     
+                        # one cell is passed and finished, so update indexes for a new cell
+                        # this is thought for a single cell, multi rois are not managed
                         if num_rois < active_rois:
                            roi_index += 1
-                           z_index = [0]*len(self.channels)
+                           z_index_roi = [0]*len(self.channels)
                                                       
                         active_rois = num_rois
                         
@@ -202,110 +199,116 @@ class PROCHIP_Measurement(Measurement):
                 if self.settings['save_h5']:
                     
                     progress_index = 0
-                    self.pause_triggered_Acquisition()
                     
+                    # temporarily stop the acquisition in order not to overwrite the camera buffer
+                    self.pause_triggered_Acquisition()
                     
                     print("\n \n ******* \n \n Saving :D !\n \n *******")
                                 
                     [frames, _dims] = self.camera.hamamatsu.getLastTotFrames()               
                     
+                    # create and initialize h5file
                     self.initH5()
                     
-                    sub_index_0 = 0
-                    sub_index_1 = 0
+                    z_index = [0]*len(self.channels)    # list of indexes in which each element is the z index corresponding to a different channel
                     buffer_index = self.camera.hamamatsu.buffer_index + 1
+                    
                     
                     for aframe in frames:                                
 
                         self.np_data = aframe.getData()
                         image_on_the_run = np.reshape(self.np_data, (eff_subarrayv, eff_subarrayh))
-                        if buffer_index%2 == 0:
-                            self.image_h5_0[sub_index_0, :, :] = image_on_the_run  # saving to the h5 dataset
-                            sub_index_0 += 1
-                        else:
-                            self.image_h5_1[sub_index_1, :, :] = image_on_the_run  # saving to the h5 dataset
-                            sub_index_1 += 1
-                        self.h5file.flush()  # maybe is not necessary
+                                                
+                        ch_on_the_run = buffer_index%2 # 0 if the image is even, 1 if the image is odd, in the image stack
+                        
+                        self.image_h5[ch_on_the_run][z_index[ch_on_the_run], :, :] = image_on_the_run  # saving to the h5 dataset
+                        z_index[ch_on_the_run] += 1
+                           
+                        self.h5file.flush()
                         self.settings['progress'] = progress_index*100./self.camera.hamamatsu.number_image_buffers
                         progress_index += 1
                         buffer_index += 1
 
-                    
-                    self.h5file.close()
-                    self.settings.save_h5.update_value(new_val = False)
+                    self.h5file.close()    # finally save and close the h5 file created
+                    self.settings['save_h5'] = False    # update the value to False, so the save_h5 can be called again
                     self.settings['progress'] = 0
+                    
+                    # restart the acquisition
                     self.restart_triggered_Acquisition(freq1)
                         
+                    
         finally:
             
             self.stop_triggered_Acquisition()
-   
+
+            # close all the h5 file still open    
             if self.settings['save_h5']:
                 self.h5file.close()  
-                self.settings.save_h5.update_value(new_val = False)
+                self.settings['save_h5'] = False
                 
             if self.settings['save_roi_h5']:
                 self.h5_roi_file.close()
-                self.settings.save_roi_h5.update_value(new_val = False)
+                self.settings['save_roi_h5'] = False
                 
 
 
-
-                
+             
     def post_run(self):
+        '''
+        Close all the figures after the run ended
+        '''
         self.imv0.close()
         self.imv1.close()
-        #pass    
             
             
             
     def update_display(self):
         """
-        Displays the numpy array called self.image.
-        This function runs repeatedly and automatically during the measurement run,
-        its update frequency is defined by self.display_update_period.
+        Displays the numpy array called displayed_image for each channel.
+        This function runs repeatedly and automatically during the measurement run.
+        Its update frequency is defined by self.display_update_period.
         """
         
         for ch in self.channels:
             
-            if ch == 0:
-                autorange_key = 'auto_range_0'
-                autolevel_key = 'auto_levels_0'
-                level_min_key = 'level_min_0'
-                level_max_key = 'level_max_0'
-            elif ch == 1:
-                autorange_key = 'auto_range_1'
-                autolevel_key = 'auto_levels_1'
-                level_min_key = 'level_min_1'
-                level_max_key = 'level_max_1'
-                
-                
+            # choose the setting keys according to the channel to update
+            autorange_key = f'auto_range_{ch}'
+            autolevel_key = f'auto_levels_{ch}'
+            level_min_key = f'level_min_{ch}'
+            level_max_key = f'level_max_{ch}'
             
             if self.settings[autolevel_key]:
-                # if autolevel is on, normalize the image to its max and min     
+                # if autolevel is ON, normalize the image to its max and min     
                 level_min = np.amin(self.im.image[ch])
                 level_max = np.amax(self.im.image[ch])
                 self.settings[level_min_key] = level_min    
                 self.settings[level_max_key] = level_max
             
             else:
-                # if autolevel is on, normalize the image to the choosen  values     
+                # if autolevel is OFF, normalize the image to the choosen values     
                 level_min = self.settings[level_min_key]
                 level_max = self.settings[level_max_key]
             
-            # note that these levels are uiint16, but the visulaized image is uint8, for compatibility with opencv processing (contours and rectangles annotations) 
-            img_thres = np.clip(self.im.image[ch], level_min, level_max) # thresolding is required if autolevel is off (could be avoided if autolevel is on)
+            # note that these levels are uint16, but the visulaized image is uint8, for compatibility with opencv processing (contours and rectangles annotations) 
             
-            image8bit_normalized = ( (img_thres-level_min+1)/(level_max-level_min+1)*255).astype('uint8') # convert to 8bit is done here for compatibility with opencv    
+            # thresolding is required if autolevel is OFF; it could be avoided if autolevel is ON
+            img_thres = np.clip(self.im.image[ch], level_min, level_max)
             
+            # conversion to 8bit is done here for compatibility with opencv    
+            image8bit_normalized = ((img_thres-level_min+1)/(level_max-level_min+1)*255).astype('uint8') 
+            
+            # creation of the image with open cv annotations, ready to be displayed
             displayed_image = self.im.draw_contours_on_image(image8bit_normalized)
          
-            if ch == 0:
-                self.imv0.setImage(displayed_image, autoLevels=False, autoRange=self.settings[autorange_key], levels=(0,255))                
+            # display the image with a frame around the figure corresponding to the channel selected to do the find_cell operation (selected_channel)
+            if ch == self.settings.selected_channel.val:
+                #cv2.rectangle(displayed_image,(0,0),(self.eff_subarrayh-1,self.eff_subarrayv-1),(255,255,0),3) 
+                self.im.highlight_channel(displayed_image)
             
-            elif ch == 1:
-                self.imv1.setImage(displayed_image, autoLevels=False, autoRange=self.settings[autorange_key], levels=(0,255))                  
-                   
+            imv_key = f'imv{ch}'
+            imv = getattr(self, imv_key)
+            imv.setImage(displayed_image, autoLevels=False, autoRange=self.settings[autorange_key], levels=(0,255))                
+               
 
 
     def updateIndex(self, last_frame_index):
@@ -313,35 +316,39 @@ class PROCHIP_Measurement(Measurement):
         Update the index of the image to fetch from buffer. 
         If we reach the end of the buffer, we reset the index.
         """
-        last_frame_index+=1
+        last_frame_index += 1
         
-        if last_frame_index > self.camera.hamamatsu.number_image_buffers - 1: #if we reach the end of the buffer
-            last_frame_index = 0 #reset
+        if last_frame_index > self.camera.hamamatsu.number_image_buffers - 1:    # if we reach the end of the buffer
+            last_frame_index = 0    # reset
         
         return last_frame_index
     
+
            
     def start_laser(self, laserHW):
-        ''' Laser is prepared for digital modulation at the power specified. Laser is turned OFF before'''   
-        if laserHW.laser_status.val=='ON':
+        ''' Laser is prepared for digital modulation at the power specified. Laser is turned OFF before''' 
+        
+        if laserHW.laser_status.val == 'ON':
             self.stop_laser(laserHW)
-        if laserHW.connected.val: # do this only if the laser was connected by the user!
-            if laserHW.operating_mode.val!='DIGITAL':
-                laserHW.operating_mode.val='DIGITAL'
+        if laserHW.connected.val:    # do this only if the laser was connected by the user!
+            if laserHW.operating_mode.val != 'DIGITAL':
+                laserHW.operating_mode.val = 'DIGITAL'
                 laserHW.operating_mode.write_to_hardware()
             
-            laserHW.laser_status.val='ON'
+            laserHW.laser_status.val = 'ON'
             laserHW.laser_status.write_to_hardware()
             laserHW.read_from_hardware()
+            
             
         
     def stop_laser(self, laserHW):
         ''' Laser is turned off '''
         
-        if laserHW.connected.val: # do this only if the laser was connected by the user!
-            laserHW.laser_status.val='OFF' 
+        if laserHW.connected.val:    # do this only if the laser was connected by the user!
+            laserHW.laser_status.val = 'OFF' 
             laserHW.laser_status.write_to_hardware()
             
+        
         
     def start_digital_rising_edge(self, digitalHW):
         '''The digital output of the DAQ start a rising edge procedure at the channel set by the user '''
@@ -350,9 +357,10 @@ class PROCHIP_Measurement(Measurement):
         digitalHW.write_value()
         
         digitalHW.value.val=1
-        digitalHW.write_value() # Trigger
+        digitalHW.write_value()    # Trigger
         digitalHW.read_from_hardware()  
         
+    
     
     def start_triggered_counter_task(self, counterHW, initial_delay, freq, duty_cycle):
         '''
@@ -360,7 +368,7 @@ class PROCHIP_Measurement(Measurement):
         It will be triggered by the digital output of the DAQ at the channel set by the user (please check that is equal to the one used for the ni_do_HW)
         '''
         
-        if counterHW.connected.val: # do this only if the counter was connected by the user!
+        if counterHW.connected.val:    # do this only if the counter was connected by the user!
             counterHW.freq.val=freq
             counterHW.freq.write_to_hardware()
             # if exposure time is less 1/fps then the laser should not be ON
@@ -369,14 +377,13 @@ class PROCHIP_Measurement(Measurement):
             #===================================================================
             # if self.camera.exposure_time.val < 1/self.camera.internal_frame_rate.val:
             #     counterHW.duty_cycle.val=self.camera.exposure_time.val*counterHW.freq.val
-            #     print(counterHW.duty_cycle.val)
             #     counterHW.duty_cycle.write_to_hardware()
             #===================================================================
             counterHW.duty_cycle.val=duty_cycle
             counterHW.duty_cycle.write_to_hardware()
             counterHW.trigger.val=True
             counterHW.trigger.write_to_hardware()
-            counterHW.initial_delay.val=initial_delay # probably in start trigger mode there is no delay so counter 1 should have an initial delay = 0
+            counterHW.initial_delay.val=initial_delay    # probably in start trigger mode there is no delay so counter 1 should have an initial delay = 0
             #counterHW.initial_delay.val=0.00003896
             #counterHW.initial_delay.val=0.0000877 # initial delay to be synchronized with the camera( check camera documentation at start trigger mode...)
             counterHW.initial_delay.write_to_hardware()
@@ -384,43 +391,45 @@ class PROCHIP_Measurement(Measurement):
             counterHW.read_from_hardware()
             
             
+            
     def stop_counter_task(self, counterHW):
         ''' Stop counter output task '''
         
-        if counterHW.connected.val: # do this only if the counter was connected by the user!
+        if counterHW.connected.val:    # do this only if the counter was connected by the user!
             counterHW.stop()
+            
             
     
     def start_triggered_Acquisition(self,freq1):
         ''' The camera is operated with external start trigger mode and will be triggered by the digital output of the DAQ '''
         
         self.camera.settings.trigger_source.update_value(new_val = 'external')
-        #self.camera.trsource.val='external'
         self.camera.settings.acquisition_mode.update_value(new_val = 'run_till_abort')
         self.camera.trmode.val='normal'
         self.camera.trmode.write_to_hardware()
         self.camera.tractive.val='syncreadout'
         self.camera.tractive.write_to_hardware()     
         self.camera.read_from_hardware()
-        #time.sleep(2)
         self.camera.hamamatsu.startAcquisition() 
 
         self.start_laser(self.laser_0)
         self.start_laser(self.laser_1)
         
-        #dutycycle for advanced laser switch hardware
+        # dutycycle for advanced laser switch hardware
         
         t_readout = self.camera.hamamatsu.getPropertyValue("internal_line_interval")[0]
         camera_dutycycle = freq1*t_readout*self.camera.subarrayv.val
         
-        #dutycycle for simple laser switch hardware
+        # dutycycle for simple laser switch hardware
         
         camera_dutycycle=0.5 
         self.start_triggered_counter_task(self.ni_co_0, initial_delay=0.0000, freq=freq1, duty_cycle=camera_dutycycle)
-        #CounterOutput2 used to control 2 lasers via 1 signal and a duplication port with a buffer and a NOT. 
+        # counterOutput2 used to control 2 lasers via 1 signal and a duplication port with a buffer and a NOT. 
         self.start_triggered_counter_task(self.ni_co_1, initial_delay=0.00003896, freq=freq1/2, duty_cycle=0.5)
         
         self.start_digital_rising_edge(self.ni_do_0)
+        
+        
         
     def pause_triggered_Acquisition(self):
         
@@ -428,23 +437,27 @@ class PROCHIP_Measurement(Measurement):
         self.stop_counter_task(self.ni_co_0)
         self.stop_counter_task(self.ni_co_1)
     
+    
+    
     def restart_triggered_Acquisition(self, freq1):
 
         self.camera.hamamatsu.startAcquisitionWithoutAlloc()
         
-        #dutycycle for advanced laser switch hardware
+        # dutycycle for advanced laser switch hardware
         
         t_readout = self.camera.hamamatsu.getPropertyValue("internal_line_interval")[0]
         camera_dutycycle = freq1*t_readout*self.camera.subarrayv.val
         
-        #dutycycle for simple laser switch hardware
+        # dutycycle for simple laser switch hardware
         
         camera_dutycycle=0.5 
         self.start_triggered_counter_task(self.ni_co_0, initial_delay=0.0000, freq=freq1, duty_cycle=camera_dutycycle)
-        #CounterOutput2 used to control 2 lasers via 1 signal and a duplication port with a buffer and a NOT. 
+        # counterOutput2 used to control 2 lasers via 1 signal and a duplication port with a buffer and a NOT. 
         self.start_triggered_counter_task(self.ni_co_1, initial_delay=0.00003896, freq=freq1/2, duty_cycle=0.5)
         
         self.start_digital_rising_edge(self.ni_do_0)
+        
+        
         
     def stop_triggered_Acquisition(self):
         ''' Acquisition is terminated, laser and counters turned off '''        
@@ -454,85 +467,92 @@ class PROCHIP_Measurement(Measurement):
         self.stop_laser(self.laser_1)
         self.stop_counter_task(self.ni_co_0)
         self.stop_counter_task(self.ni_co_1)
-        self.camera.settings.trigger_source.update_value(new_val = 'internal')
-        #self.camera.trsource.val='internal'
+        self.camera.settings['trigger_source'] = 'internal'
         self.camera.trsource.write_to_hardware()
         self.camera.read_from_hardware()
         
+    def create_saving_directory(self):
+        
+        if not os.path.isdir(self.app.settings['save_dir']):
+            os.makedirs(self.app.settings['save_dir'])
+        
     def initH5(self):
         """
-        Initialization operations for the h5 file.
+        Initialization operations for the h5 file
         """
-        t0 = time.time()
-        f = self.app.settings['data_fname_format'].format(
-            app=self.app,
-            measurement=self,
-            timestamp=datetime.fromtimestamp(t0),
-            sample =self.app.settings["sample"],
-            ext='h5')
+        self.create_saving_directory()
         
-        fname = os.path.join(self.app.settings['save_dir'], f)
+        # file name creation
+        timestamp = time.strftime("%y%m%d_%H%M%S", time.localtime())
+        sample = self.app.settings['sample']
+        sample_name = f'{timestamp}_{self.name}_{sample}.h5'
+        fname = os.path.join(self.app.settings['save_dir'], sample_name)
         
+        # file creation
         self.h5file = h5_io.h5_base_file(app=self.app, measurement=self, fname = fname)
         self.h5_group = h5_io.h5_create_measurement_group(measurement=self, h5group=self.h5file)
-        img_size=self.im.image[0].shape #both image1 and image2 are valid, since they have the same shape
+        
+        img_size=self.im.image[0].shape    # both image[0] and image[1] are valid, since they have the same shape
         
         number_of_channels = len(self.channels)
         
+        # take as third dimension of the file the total number of images collected in the buffer
         if self.camera.hamamatsu.last_frame_number < self.camera.hamamatsu.number_image_buffers:
-            length = int(self.camera.hamamatsu.last_frame_number/number_of_channels)
-        
+            length = int((self.camera.hamamatsu.last_frame_number+1)/number_of_channels)
         else:
             length=self.camera.hamamatsu.number_image_buffers/number_of_channels #divided by two since we have the two channels
             
-        self.image_h5_0 = self.h5_group.create_dataset( name  = 't0/c0/image', 
+        # dataset creation
+        
+        
+        for ch_index  in self.channels:
+            
+            name = f't0/c{ch_index}/image'
+            
+            self.image_h5[ch_index] = self.h5_group.create_dataset( name  = name, 
                                                       shape = ( length, img_size[0], img_size[1]),
                                                       dtype = self.im.image[0].dtype, chunks = (1, img_size[0], img_size[1])
                                                       )
-        self.image_h5_1 = self.h5_group.create_dataset( name  = 't0/c1/image', 
-                                                      shape = ( length, img_size[0], img_size[1]),
-                                                      dtype = self.im.image[1].dtype, chunks = (1, img_size[0], img_size[1])
-                                                      ) 
+               
+            self.image_h5[ch_index].attrs['element_size_um'] =  [self.settings['zsampling'],self.settings['ysampling'],self.settings['xsampling']]
+            self.image_h5[ch_index].attrs['acq_time'] =  timestamp
         
-        self.image_h5_0.dims[0].label = "z"
-        self.image_h5_0.dims[1].label = "y"
-        self.image_h5_0.dims[2].label = "x"
-        
-        self.image_h5_0.attrs['element_size_um'] =  [self.settings['zsampling'],self.settings['ysampling'],self.settings['xsampling']]
-        
-        self.image_h5_1.dims[0].label = "z"
-        self.image_h5_1.dims[1].label = "y"
-        self.image_h5_1.dims[2].label = "x"
-        
-        self.image_h5_1.attrs['element_size_um'] =  [self.settings['zsampling'],self.settings['ysampling'],self.settings['xsampling']]
+
+    
         
     def init_roi_h5(self):
         """
-        Initialization operations for the h5 file.
+        Initialization operations for the h5 file
         """
-        t0 = time.time()
-        f = self.app.settings['data_fname_format'].format(
-            app=self.app,
-            measurement=self,
-            timestamp=datetime.fromtimestamp(t0),
-            sample = 'roi'+ self.app.settings["sample"],
-            ext='h5')
+        self.create_saving_directory()
         
-        fname = os.path.join(self.app.settings['save_dir'], f)
+        # file name creation
+        timestamp = time.strftime("%y%m%d_%H%M%S", time.localtime())
+        sample = self.app.settings['sample']
+        sample_name = f'{timestamp}_{self.name}_{sample}_ROI.h5'
+        fname = os.path.join(self.app.settings['save_dir'], sample_name)
         
+        # file creation
         self.h5_roi_file = h5_io.h5_base_file(app=self.app, measurement=self, fname = fname)
         self.h5_roi_group = h5_io.h5_create_measurement_group(measurement=self, h5group=self.h5_roi_file)
         
        
-    def roi_h5_dataset(self, t_index, c_index):    
+    def roi_h5_dataset(self, t_index, c_index):  
+        """
+        Dataset creation function.
+        It creates new datasets only when there are new cells detected by the algorithm
+        """
         
-        roi_size = self.settings.roi_half_side.val*2
+        roi_size = self.settings.roi_half_side.val*2    # roi dimension
         
-        if len(self.roi_h5) == 0:
+        timestamp = time.strftime("%y%m%d_%H%M%S", time.localtime())
+        
+        
+        if len(self.roi_h5) == 0:    # creation of the first two datasets (one for each channel)
             
             for ch in self.channels:
-                
-                name = 't0' +  '/c' + str(ch) + '/roi'
+                             
+                name = f't{0:04d}/c{ch}/roi' # data set name, initially with t index 0000
                 
                 self.roi_h5.append(self.h5_roi_group.create_dataset( name  = name, 
                                                               shape = (1, roi_size, roi_size),
@@ -540,22 +560,20 @@ class PROCHIP_Measurement(Measurement):
                                                               dtype = np.uint16, chunks = (1, roi_size, roi_size)
                                                               ) 
                                    )
-                self.roi_h5[ch].dims[0].label = "z"
-                self.roi_h5[ch].dims[1].label = "y"
-                self.roi_h5[ch].dims[2].label = "x"
+                
+                # dataset attributes
                 self.roi_h5[ch].attrs['element_size_um'] =  [self.settings['xsampling'],self.settings['ysampling'],self.settings['zsampling']]
-                self.roi_h5[ch].attrs['acq_time'] =  time.time()
+                self.roi_h5[ch].attrs['acq_time'] =  timestamp
                 self.roi_h5[c_index].attrs['centroid_x'] =  self.im.cx[0] # to be updated when multiple rois are saved
                 self.roi_h5[c_index].attrs['centroid_y'] =  self.im.cy[0]
                 
         else:
              
+            name = f't{t_index:04d}/c{c_index}/roi' # dataset name  
             
-            name = 't' + str(t_index) + '/c' + str(c_index) + '/roi'
+            fullname = self.h5_roi_group.name + '/' + name
             
-            fullname = self.h5_roi_group.name +'/'+ name
-            
-            if self.roi_h5[c_index].name != fullname:
+            if self.roi_h5[c_index].name != fullname:    # create a new dataset only if the name does not exist yet
                         
                 self.roi_h5[c_index] = self.h5_roi_group.create_dataset( name  = name, 
                                                                   shape = (1, roi_size, roi_size),
@@ -563,11 +581,9 @@ class PROCHIP_Measurement(Measurement):
                                                                   dtype = np.uint16, chunks = (1, roi_size, roi_size)
                                                                   ) 
                 
-                self.roi_h5[c_index].dims[0].label = "z"
-                self.roi_h5[c_index].dims[1].label = "y"
-                self.roi_h5[c_index].dims[2].label = "x"
+                # dataset attributes
                 self.roi_h5[c_index].attrs['element_size_um'] =  [self.settings['xsampling'],self.settings['ysampling'],self.settings['zsampling']]
-                self.roi_h5[c_index].attrs['acq_time'] =  time.time()
+                self.roi_h5[c_index].attrs['acq_time'] =  timestamp
                 self.roi_h5[c_index].attrs['centroid_x'] =  self.im.cx[0] # to be updated when multiple rois are saved
                 self.roi_h5[c_index].attrs['centroid_y'] =  self.im.cy[0]
         

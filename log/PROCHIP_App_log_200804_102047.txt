@@ -1,0 +1,18 @@
+2020-08-04T10:22:06|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\LabPrograms\Python\PROCHIP_Microscope\PROCHIP_Measurement_cell_detection.py", line 177, in run
+    self.init_roi_h5()
+  File "C:\LabPrograms\Python\PROCHIP_Microscope\PROCHIP_Measurement_cell_detection.py", line 517, in init_roi_h5
+    timestamp=datetime.fromtimestamp(t0)+'ROI',
+TypeError: unsupported operand type(s) for +: 'datetime.datetime' and 'str'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\measurement.py", line 25, in run
+    self.measurement._thread_run()
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\measurement.py", line 179, in _thread_run
+    self.run()
+  File "C:\LabPrograms\Python\PROCHIP_Microscope\PROCHIP_Measurement_cell_detection.py", line 248, in run
+    self.h5_roi_file.close()
+AttributeError: 'PROCHIP_Measurement' object has no attribute 'h5_roi_file'
+

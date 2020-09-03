@@ -1,0 +1,7 @@
+2020-08-04T11:15:24|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\helper_funcs.py", line 108, in eventFilter
+    self.func_on_close()
+  File "C:\LabPrograms\Python\PROCHIP_Microscope\PROCHIP_App.py", line 42, in on_close
+    self.meassurments['PROCHIP_Measurement'].imv0.close()
+AttributeError: 'PROCHIP_App' object has no attribute 'meassurments'
+

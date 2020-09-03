@@ -1,8 +1,10 @@
 from BaseMicroscopeModified_ScopeFoundry.BaseMicroscopeAppModified import BaseMicroscopeAppModified
+from ScopeFoundry import BaseMicroscopeApp
+import time
 
 
 
-class PROCHIP_App(BaseMicroscopeAppModified):
+class PROCHIP_App(BaseMicroscopeApp):
     
     name = 'PROCHIP_App'
     
@@ -35,7 +37,6 @@ class PROCHIP_App(BaseMicroscopeAppModified):
         self.ui.show()
         self.ui.activateWindow()
         
-
 if __name__ == '__main__':
             
     import sys
@@ -44,14 +45,9 @@ if __name__ == '__main__':
     ################### for debugging only ##############
     app.settings_load_ini(".\\Settings\\settingsPROCHIP.ini")
     for hc_name, hc in app.hardware.items():
-        
-       # time.sleep(0.5)
-       #hc.enable_connection()
-       # hc.connect()
-       hc.settings['connected'] = True    # connect all the hardwares
-       
+
+       hc.settings['connected'] = True    # connect all the hardwares   
     #####################################################    
-    
     
     sys.exit(app.exec_())
         
