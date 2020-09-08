@@ -157,8 +157,8 @@ class PROCHIP_Measurement(Measurement):
                     self.im.image[channel_index] = np.reshape(self.np_data, (eff_subarrayv, eff_subarrayh))
                     
                     # detect all the cells present in this frame (do it only on the selected channel and not both)
-                    #if channel_index == self.settings.selected_channel.val:
-                    self.im.find_cell(self.settings.selected_channel.val)
+                    if channel_index == self.settings.selected_channel.val:
+                        self.im.find_cell(self.settings.selected_channel.val)
                      
                     if self.settings['save_roi_h5']:
                         
@@ -563,7 +563,7 @@ class PROCHIP_Measurement(Measurement):
                                    )
                 
                 # dataset attributes
-                self.roi_h5[ch].attrs['element_size_um'] =  [self.settings['xsampling'],self.settings['ysampling'],self.settings['zsampling']]
+                self.roi_h5[ch].attrs['element_size_um'] =  [self.settings['zsampling'],self.settings['ysampling'],self.settings['xsampling']]
                 self.roi_h5[ch].attrs['acq_time'] =  timestamp
                 self.roi_h5[c_index].attrs['centroid_x'] =  self.im.cx[0] # to be updated when multiple rois are saved
                 self.roi_h5[c_index].attrs['centroid_y'] =  self.im.cy[0]
@@ -583,7 +583,7 @@ class PROCHIP_Measurement(Measurement):
                                                                   ) 
                 
                 # dataset attributes
-                self.roi_h5[c_index].attrs['element_size_um'] =  [self.settings['xsampling'],self.settings['ysampling'],self.settings['zsampling']]
+                self.roi_h5[c_index].attrs['element_size_um'] =  [self.settings['zsampling'],self.settings['ysampling'],self.settings['xsampling']]
                 self.roi_h5[c_index].attrs['acq_time'] =  timestamp
                 self.roi_h5[c_index].attrs['centroid_x'] =  self.im.cx[0] # to be updated when multiple rois are saved
                 self.roi_h5[c_index].attrs['centroid_y'] =  self.im.cy[0]
