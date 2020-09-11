@@ -1,0 +1,9 @@
+2020-09-10T16:38:25|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\measurement.py", line 25, in run
+    self.measurement._thread_run()
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\measurement.py", line 179, in _thread_run
+    self.run()
+  File "C:\LabPrograms\Python\PROCHIP_Microscope\PROCHIP_Measurement_cell_detection_MULTIROI.py", line 232, in run
+    for position in range((len(old_z_index))/2):
+TypeError: 'float' object cannot be interpreted as an integer
+
