@@ -162,8 +162,8 @@ class PROCHIP_Measurement(Measurement):
                      
                     if self.settings['save_roi_h5']:
                         
-                        num_rois = len(self.im.contour)   
-                        
+                        # num_rois = len(self.im.contour)
+                          
                         # create and initialize the roi h5 file if it does not exist yet
                         if first_cycle:
                             self.init_roi_h5()
@@ -171,6 +171,8 @@ class PROCHIP_Measurement(Measurement):
                         
                         # create a roi for each cell in the frame
                         rois = self.im.roi_creation(channel_index)
+                        
+                        num_rois = len(rois)
                             
                         for i, roi in enumerate(rois):
                             
@@ -565,8 +567,10 @@ class PROCHIP_Measurement(Measurement):
                 # dataset attributes
                 self.roi_h5[ch].attrs['element_size_um'] =  [self.settings['zsampling'],self.settings['ysampling'],self.settings['xsampling']]
                 self.roi_h5[ch].attrs['acq_time'] =  timestamp
-                self.roi_h5[c_index].attrs['centroid_x'] =  self.im.cx[0] # to be updated when multiple rois are saved
-                self.roi_h5[c_index].attrs['centroid_y'] =  self.im.cy[0]
+                # self.roi_h5[c_index].attrs['centroid_x'] =  self.im.cx[0] # to be updated when multiple rois are saved
+                # self.roi_h5[c_index].attrs['centroid_y'] =  self.im.cy[0]
+                self.roi_h5[ch].attrs['centroid_x'] =  self.im.cx[0] # to be updated when multiple rois are saved
+                self.roi_h5[ch].attrs['centroid_y'] =  self.im.cy[0]
                 
         else:
              

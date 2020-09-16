@@ -195,15 +195,19 @@ class PROCHIP_Measurement(Measurement):
                             centroid_x_position.append(0)   
                             centroid_y_position.append(0)
                         
+                        z_index_lenght = len(z_index) # GIUSTO??? SERVE???
                             
                         for roi_in_image, roi in enumerate(rois):
+                            
+                            print('roi_in_image', roi_in_image)
                             
                             comp_index = 0
                             empty_check = False
                             comp_check = False
                             
                             # Centroid comparison
-                            for comp_index in range(active_rois):
+                            
+                            for comp_index in range(int((len(old_z_index))/2)): # OPPURE #for comp_index in range(active_rois):
                                 if z_index[2*comp_index+channel_index] == 0:
                                     empty_check = True
                                     break
@@ -211,17 +215,42 @@ class PROCHIP_Measurement(Measurement):
                                 if self.im.cx[roi_in_image] in range(centroid_x_position[comp_index]-RANGE, centroid_x_position[comp_index]+RANGE) and self.im.cy[roi_in_image] in range(centroid_y_position[comp_index]-RANGE, centroid_y_position[comp_index]+RANGE):    
                                     comp_check = True
                                     break
+                                comp_index += 1
                             #breakpoint()    
                             if comp_check == False:    
                                     
                                 if len(self.roi_h5) != 0:
-                                    contained_rois = int((len(z_index) - len(old_z_index))/2 - roi_in_image + comp_index)
+                                    
+                                    print('z_index lenght', len(z_index))
+                                    print('old_z_index lenght', len(old_z_index))
+                                    print('comp_index', comp_index)
+                                    
+                                    
+                                    contained_rois = int((z_index_lenght - len(old_z_index))/2 - roi_in_image + comp_index) # OPPURE #contained_rois = int((len(z_index) - len(old_z_index))/2 - roi_in_image + comp_index)
+                                    
+                                    print('contained_roi', contained_rois)
                                 
                                 #SE CREO SINGOLO DATASET PER VOLTA PROBLEMA QUANDO HO UNA SECONDA CELLULA MA STO GIA ANALIZZANDO IL SECONDO CANALE QUINDI z_index==old_z_index...    
                                 # self.roi_h5_dataset(roi_index+contained_rois, channel_index, roi_in_image)#, contained_rois)
-                                self.roi_h5_double_dataset(roi_index + contained_rois, roi_in_image)
+                                self.roi_h5_double_dataset(roi_index + contained_rois, roi_in_image, comp_index)
                                 
-                                print(len(self.roi_h5))
+                                print('elements in roi_h5', len(self.roi_h5))
+                                
+                                
+                                
+                                
+                                
+                                # NEW PART!!!
+                                while len(z_index) < len(self.roi_h5):
+                                    z_index.append(0)
+                                    
+                                while len(centroid_x_position) < int((len(self.roi_h5))/2):
+                                    centroid_x_position.append(0)   
+                                    centroid_y_position.append(0)
+                                
+                                
+                                
+                                
                                 
                                 #breakpoint()
 
@@ -233,6 +262,13 @@ class PROCHIP_Measurement(Measurement):
                                 if z_index[insert_position] != 0:
                                     self.roi_h5[insert_position].resize(self.roi_h5[insert_position].shape[0]+1, axis = 0)
                                 
+                                # print(self.roi_h5)
+                                # print('z_index', z_index)
+                                # print(roi.shape)
+                                
+                                print('insert_position', insert_position)
+                                print('z_index', z_index)
+                                
                                 self.roi_h5[insert_position][z_index[insert_position], :, :] = roi
                                 self.h5_roi_file.flush()
                                 z_index[insert_position] += 1
@@ -240,7 +276,7 @@ class PROCHIP_Measurement(Measurement):
                                 centroid_x_position[int(insert_position/2)] = self.im.cx[roi_in_image]
                                 centroid_y_position[int(insert_position/2)] = self.im.cy[roi_in_image]
                                 
-                                print('ROI saved in a dataset')
+                                print('ROI saved in a dataset, comp_check == False')
                                 
                             else:
                                 if z_index[2*comp_index+channel_index] != 0:
@@ -250,27 +286,38 @@ class PROCHIP_Measurement(Measurement):
                                 self.h5_roi_file.flush()
                                 z_index[2*comp_index+channel_index] += 1
 
-                                centroid_x_position[int(insert_position/2)] = self.im.cx[roi_in_image]
-                                centroid_y_position[int(insert_position/2)] = self.im.cy[roi_in_image]
-                    
-                        if num_rois < active_rois:
-                           for position in range(int((len(old_z_index))/2)):
-                               # Past dimensions comparison to see if we have new cells. If not, delate these elements
-                               if old_z_index[2*position+channel_index] == z_index[2*position+channel_index]:
-                                   del z_index[2*position]
-                                   del z_index[2*position]
-                                   del self.roi_h5[2*position]
-                                   del self.roi_h5[2*position]
+                                centroid_x_position[int((2*comp_index+channel_index)/2)] = self.im.cx[roi_in_image]
+                                centroid_y_position[int((2*comp_index+channel_index)/2)] = self.im.cy[roi_in_image]
+                                
+                                print('ROI saved in a dataset, comp_check == True')
+                        
+                        
+                        
+                        for position in range(int((len(old_z_index))/2)): # FARLO SEMPRE OPPURE SOLO SE: # if num_rois < active_rois:
+                                
+                            # Past dimensions comparison to see if we have new cells. If not, delate these elements
+                                
+                            check_pos = 2*(active_rois - position -1)
+                                
+                            if old_z_index[check_pos + channel_index] == z_index[check_pos + channel_index]:
+                                del z_index[check_pos]
+                                del z_index[check_pos]
+                                del self.roi_h5[check_pos]
+                                del self.roi_h5[check_pos]
                                    
-                                   del centroid_x_position[position]
-                                   del centroid_y_position[position]
+                                del centroid_x_position[check_pos]
+                                del centroid_y_position[check_pos]
                                    
-                                   position -= 1
-                                   roi_index += 1
-                                   # ELIMINARE ANCHE ELEMENTI CORRISPONDENTI DI roi_h5? SUPPONGO DI SI PER ORA...
+                                roi_index += 1
+                                # ELIMINARE ANCHE ELEMENTI CORRISPONDENTI DI roi_h5? SUPPONGO DI SI PER ORA...    
                                                       
+                            
+                        print('WE ARE HERE!!!')
+                        print('z_index HERE', z_index)
+                        print('old_z_index HERE', old_z_index, '\n\n\n')
+                        
                         active_rois = num_rois
-                        old_z_index = z_index
+                        old_z_index = list(z_index)
                         
                         self.settings['captured_cells'] = roi_index
                     
@@ -667,7 +714,9 @@ class PROCHIP_Measurement(Measurement):
         
         
         
-    def roi_h5_double_dataset(self, t_index, roi_in_image):#, contained_rois):    
+    def roi_h5_double_dataset(self, t_index, roi_in_image, comp_index):#, contained_rois):    
+        
+        print('t_index passed to roi_h5_double_dataset: ', t_index)
         
         roi_size = self.settings.roi_half_side.val*2
         
@@ -676,11 +725,17 @@ class PROCHIP_Measurement(Measurement):
             name = 't' + str(t_index) + '/c' + str(ch) + '/roi'
                 
             fullname = self.h5_roi_group.name +'/'+ name
+                
             
-            
-            if len(self.roi_h5) > t_index + ch:
-                if self.roi_h5[ch].name == fullname: #INDICE NON CORRETTO...CAMBIARE!!!
+            for name_check_position in range (int((len(self.roi_h5))/2)): # FARLO SEMPRE OPPURE SOLO SE: #if len(self.roi_h5) > t_index + ch:
+                if self.roi_h5[name_check_position*2 + ch].name == fullname: #INDICE NON CORRETTO...CAMBIARE!!!
+                    print('return from the dataset function!!!')
                     return
+                    
+                
+                # if self.roi_h5[ch + comp_index].name == fullname: #INDICE NON CORRETTO...CAMBIARE!!!
+                #     print('return from the dataset function!!!')
+                #     return
     
             self.roi_h5.append(self.h5_roi_group.create_dataset( name  = name, 
                                                               shape = (1, roi_size, roi_size),
