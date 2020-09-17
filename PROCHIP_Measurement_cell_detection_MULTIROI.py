@@ -188,6 +188,8 @@ class PROCHIP_Measurement(Measurement):
                         
                         contained_rois = 0
                         
+                        new_cell = 0
+                        
                         while len(z_index) < num_rois*2:
                             z_index.append(0)
                             
@@ -202,38 +204,55 @@ class PROCHIP_Measurement(Measurement):
                             print('roi_in_image', roi_in_image)
                             
                             comp_index = 0
-                            empty_check = False
+                            empty_check = 0
                             comp_check = False
                             
                             # Centroid comparison
                             
                             for comp_index in range(int((len(old_z_index))/2)): # OPPURE #for comp_index in range(active_rois):
                                 if z_index[2*comp_index+channel_index] == 0:
-                                    empty_check = True
+                                    empty_check = 1
                                     break
                                 #if self.im.cx[roi_in_image] in range(self.roi_h5[2*comp_index+channel_index].centroid_x-RANGE,self.roi_h5[2*comp_index+channel_index].centroid_x+RANGE) and self.im.cy[roi_in_image] in range(self.roi_h5[2*comp_index+channel_index].centroid_y-RANGE,self.roi_h5[2*comp_index+channel_index].centroid_y+RANGE):
                                 if self.im.cx[roi_in_image] in range(centroid_x_position[comp_index]-RANGE, centroid_x_position[comp_index]+RANGE) and self.im.cy[roi_in_image] in range(centroid_y_position[comp_index]-RANGE, centroid_y_position[comp_index]+RANGE):    
                                     comp_check = True
                                     break
-                                comp_index += 1
-                            #breakpoint()    
-                            if comp_check == False:    
-                                    
-                                if len(self.roi_h5) != 0:
-                                    
-                                    print('z_index lenght', len(z_index))
-                                    print('old_z_index lenght', len(old_z_index))
-                                    print('comp_index', comp_index)
-                                    
-                                    
-                                    contained_rois = int((z_index_lenght - len(old_z_index))/2 - roi_in_image + comp_index) # OPPURE #contained_rois = int((len(z_index) - len(old_z_index))/2 - roi_in_image + comp_index)
-                                    
-                                    print('contained_roi', contained_rois)
+                                #comp_index += 1
+                                # if comp_index == (int((len(old_z_index))/2) - 1):
+                                #     comp_index += 1
                                 
+                                
+                                
+                            #breakpoint()    
+                            
+                            if comp_check == False: 
+                                
+                                if comp_index == (int((len(old_z_index))/2) - 1) and empty_check == 0:
+                                    new_cell += 1
+                                    if len(old_z_index) != 0:
+                                        contained_rois = new_cell + comp_index
+                                        
+                                else:
+                                    
+                                    #if len(self.roi_h5) != 0:
+                                    #if len(old_z_index) != 0:
+                                        
+                                        print('z_index lenght', len(z_index))
+                                        print('old_z_index lenght', len(old_z_index))
+                                        print('comp_index', comp_index)
+                                        
+                                        
+                                        #contained_rois = int((z_index_lenght - len(old_z_index))/2 - roi_in_image + comp_index) # OPPURE #contained_rois = int((len(z_index) - len(old_z_index))/2 - roi_in_image + comp_index)
+                                        #contained_rois = int((z_index_lenght - len(old_z_index))/2 - roi_in_image)
+                                        #contained_rois = roi_in_image + empty_check
+                                        contained_rois = roi_in_image
+                                        
+                                        print('contained_roi', contained_rois)
+                                    
                                 #SE CREO SINGOLO DATASET PER VOLTA PROBLEMA QUANDO HO UNA SECONDA CELLULA MA STO GIA ANALIZZANDO IL SECONDO CANALE QUINDI z_index==old_z_index...    
                                 # self.roi_h5_dataset(roi_index+contained_rois, channel_index, roi_in_image)#, contained_rois)
-                                self.roi_h5_double_dataset(roi_index + contained_rois, roi_in_image, comp_index)
-                                
+                                self.roi_h5_double_dataset(roi_index + contained_rois, roi_in_image)#, comp_index)
+                                    
                                 print('elements in roi_h5', len(self.roi_h5))
                                 
                                 
@@ -254,7 +273,7 @@ class PROCHIP_Measurement(Measurement):
                                 
                                 #breakpoint()
 
-                                if empty_check == True:
+                                if empty_check == 1:
                                     insert_position = 2*comp_index+channel_index
                                 else:
                                     insert_position = len(self.roi_h5) - len(self.channels) + channel_index
@@ -278,7 +297,7 @@ class PROCHIP_Measurement(Measurement):
                                 
                                 print('ROI saved in a dataset, comp_check == False')
                                 
-                            else:
+                            else:    # comp_check == False
                                 if z_index[2*comp_index+channel_index] != 0:
                                     self.roi_h5[2*comp_index+channel_index].resize(self.roi_h5[2*comp_index+channel_index].shape[0]+1, axis = 0)
                                 
@@ -292,12 +311,15 @@ class PROCHIP_Measurement(Measurement):
                                 print('ROI saved in a dataset, comp_check == True')
                         
                         
+                            #contained_rois += 1
+                        
                         
                         for position in range(int((len(old_z_index))/2)): # FARLO SEMPRE OPPURE SOLO SE: # if num_rois < active_rois:
                                 
                             # Past dimensions comparison to see if we have new cells. If not, delate these elements
                                 
-                            check_pos = 2*(active_rois - position -1)
+                            #check_pos = 2*(active_rois - position -1)
+                            check_pos = 2*(int((len(old_z_index))/2) - position -1)
                                 
                             if old_z_index[check_pos + channel_index] == z_index[check_pos + channel_index]:
                                 del z_index[check_pos]
@@ -305,8 +327,8 @@ class PROCHIP_Measurement(Measurement):
                                 del self.roi_h5[check_pos]
                                 del self.roi_h5[check_pos]
                                    
-                                del centroid_x_position[check_pos]
-                                del centroid_y_position[check_pos]
+                                del centroid_x_position[int(check_pos/2)]
+                                del centroid_y_position[int(check_pos/2)]
                                    
                                 roi_index += 1
                                 # ELIMINARE ANCHE ELEMENTI CORRISPONDENTI DI roi_h5? SUPPONGO DI SI PER ORA...    
@@ -314,7 +336,9 @@ class PROCHIP_Measurement(Measurement):
                             
                         print('WE ARE HERE!!!')
                         print('z_index HERE', z_index)
-                        print('old_z_index HERE', old_z_index, '\n\n\n')
+                        print('old_z_index HERE', old_z_index)
+                        
+                        print('roi_index', roi_index, '\n\n\n')
                         
                         active_rois = num_rois
                         old_z_index = list(z_index)
@@ -610,7 +634,8 @@ class PROCHIP_Measurement(Measurement):
         # file name creation
         timestamp = time.strftime("%y%m%d_%H%M%S", time.localtime())
         sample = self.app.settings['sample']
-        sample_name = f'{timestamp}_{self.name}_{sample}.h5'
+        #sample_name = f'{timestamp}_{self.name}_{sample}.h5'
+        sample_name = '_'.join([timestamp, self.name, sample, '.h5'])
         fname = os.path.join(self.app.settings['save_dir'], sample_name)
         
         # file creation
@@ -654,7 +679,8 @@ class PROCHIP_Measurement(Measurement):
         # file name creation
         timestamp = time.strftime("%y%m%d_%H%M%S", time.localtime())
         sample = self.app.settings['sample']
-        sample_name = f'{timestamp}_{self.name}_{sample}_ROI.h5'
+        #sample_name = f'{timestamp}_{self.name}_{sample}_ROI.h5'
+        sample_name = '_'.join([timestamp, self.name, sample, 'ROI.h5'])
         fname = os.path.join(self.app.settings['save_dir'], sample_name)
         
         # file creation
@@ -714,7 +740,7 @@ class PROCHIP_Measurement(Measurement):
         
         
         
-    def roi_h5_double_dataset(self, t_index, roi_in_image, comp_index):#, contained_rois):    
+    def roi_h5_double_dataset(self, t_index, roi_in_image):#, comp_index):#, contained_rois):    
         
         print('t_index passed to roi_h5_double_dataset: ', t_index)
         

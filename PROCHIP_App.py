@@ -25,7 +25,7 @@ class PROCHIP_App(BaseMicroscopeApp):
         from Hamamatsu_ScopeFoundry.CameraMeasurement import HamamatsuMeasurement
         self.add_measurement(HamamatsuMeasurement(self))
        
-        from PROCHIP_Microscope.PROCHIP_Measurement_cell_detection import PROCHIP_Measurement
+        from PROCHIP_Microscope.PROCHIP_Measurement_cell_detection_MULTIROI import PROCHIP_Measurement
 
         self.add_measurement(PROCHIP_Measurement(self))
 
