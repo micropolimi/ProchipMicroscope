@@ -488,7 +488,8 @@ class PROCHIP_Measurement(Measurement):
         # file name creation
         timestamp = time.strftime("%y%m%d_%H%M%S", time.localtime())
         sample = self.app.settings['sample']
-        sample_name = f'{timestamp}_{self.name}_{sample}.h5'
+        #sample_name = f'{timestamp}_{self.name}_{sample}.h5'
+        sample_name = '_'.join([timestamp, self.name, sample, '.h5'])
         fname = os.path.join(self.app.settings['save_dir'], sample_name)
         
         # file creation
@@ -532,7 +533,8 @@ class PROCHIP_Measurement(Measurement):
         # file name creation
         timestamp = time.strftime("%y%m%d_%H%M%S", time.localtime())
         sample = self.app.settings['sample']
-        sample_name = f'{timestamp}_{self.name}_{sample}_ROI.h5'
+        #sample_name = f'{timestamp}_{self.name}_{sample}_ROI.h5'
+        sample_name = '_'.join([timestamp, self.name, sample, 'ROI.h5'])
         fname = os.path.join(self.app.settings['save_dir'], sample_name)
         
         # file creation
