@@ -170,7 +170,7 @@ class PROCHIP_Measurement(Measurement):
                             first_cycle = False
                         
                         # create a roi for each cell in the frame
-                        rois = self.im.roi_creation(channel_index)
+                        rois, selected_cx, selected_cy = self.im.roi_creation(channel_index)
                         
                         num_rois = len(rois)
                             
@@ -489,8 +489,8 @@ class PROCHIP_Measurement(Measurement):
         timestamp = time.strftime("%y%m%d_%H%M%S", time.localtime())
         sample = self.app.settings['sample']
         #sample_name = f'{timestamp}_{self.name}_{sample}.h5'
-        sample_name = '_'.join([timestamp, self.name, sample, '.h5'])
-        fname = os.path.join(self.app.settings['save_dir'], sample_name)
+        sample_name = '_'.join([timestamp, self.name, sample])
+        fname = os.path.join(self.app.settings['save_dir'], sample_name + '.h5')
         
         # file creation
         self.h5file = h5_io.h5_base_file(app=self.app, measurement=self, fname = fname)

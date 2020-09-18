@@ -109,6 +109,9 @@ class ImageManager:
         
         l = image16bit.shape
         rois = []
+        selected_cx = []
+        selected_cy = []
+        
         
         for indx, _val in enumerate(cx):
             x = int(cx[indx] - roi_half_side) 
@@ -118,8 +121,10 @@ class ImageManager:
             if x>0 and y>0 and x+w<l[1]-1 and y+h<l[0]-1:    # only rois far from edges are considered
                     detail = image16bit [y:y+w, x:x+h]
                     rois.append(detail)
+                    selected_cx.append(cx[indx])
+                    selected_cy.append(cy[indx])
                     
-        return rois
+        return rois, selected_cx, selected_cy
     
     def highlight_channel(self,displayed_image):
         

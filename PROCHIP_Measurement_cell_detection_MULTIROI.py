@@ -153,6 +153,7 @@ class PROCHIP_Measurement(Measurement):
             
             self.image_h5 = [None]*len(self.channels)    # prepare list to contain the image data to be saved in the h5file
             
+            number_of_channels = len(self.channels)
             
             while not self.interrupt_measurement_called:    # "run till abort" mode
             
@@ -180,7 +181,7 @@ class PROCHIP_Measurement(Measurement):
                             self.init_roi_h5()
                             first_cycle = False
                             
-                        rois = self.im.roi_creation(channel_index)
+                        rois, selected_cx, selected_cy = self.im.roi_creation(channel_index)
                                                 
                         num_rois = len(rois) 
                         
@@ -190,18 +191,18 @@ class PROCHIP_Measurement(Measurement):
                         
                         new_cell = 0
                         
-                        while len(z_index) < num_rois*2:
+                        while len(z_index) < num_rois*number_of_channels:
                             z_index.append(0)
-                            
-                        while len(centroid_x_position) < num_rois:
-                            centroid_x_position.append(0)   
-                            centroid_y_position.append(0)
                         
-                        z_index_lenght = len(z_index) # GIUSTO??? SERVE???
+                        while len(centroid_x_position) < num_rois:
+                            centroid_x_position.append(None)    # or .append(0) ???
+                            centroid_y_position.append(None)    # or .append(0) ???
+                        
+                        #z_index_lenght = len(z_index) # GIUSTO??? SERVE???
                             
-                        for roi_in_image, roi in enumerate(rois):
+                        for roi_idx, roi in enumerate(rois):
                             
-                            print('roi_in_image', roi_in_image)
+                            print('roi_idx', roi_idx)
                             
                             comp_index = 0
                             empty_check = 0
@@ -209,16 +210,16 @@ class PROCHIP_Measurement(Measurement):
                             
                             # Centroid comparison
                             
-                            for comp_index in range(int((len(old_z_index))/2)): # OPPURE #for comp_index in range(active_rois):
-                                if z_index[2*comp_index+channel_index] == 0:
+                            for comp_index in range(int((len(old_z_index))/number_of_channels)): # OPPURE #for comp_index in range(active_rois):
+                                if z_index[number_of_channels*comp_index+channel_index] == 0:
                                     empty_check = 1
                                     break
-                                #if self.im.cx[roi_in_image] in range(self.roi_h5[2*comp_index+channel_index].centroid_x-RANGE,self.roi_h5[2*comp_index+channel_index].centroid_x+RANGE) and self.im.cy[roi_in_image] in range(self.roi_h5[2*comp_index+channel_index].centroid_y-RANGE,self.roi_h5[2*comp_index+channel_index].centroid_y+RANGE):
-                                if self.im.cx[roi_in_image] in range(centroid_x_position[comp_index]-RANGE, centroid_x_position[comp_index]+RANGE) and self.im.cy[roi_in_image] in range(centroid_y_position[comp_index]-RANGE, centroid_y_position[comp_index]+RANGE):    
+                                #if selected_cx[roi_idx] in range(self.roi_h5[number_of_channels*comp_index+channel_index].centroid_x-RANGE,self.roi_h5[number_of_channels*comp_index+channel_index].centroid_x+RANGE) and selected_cy[roi_idx] in range(self.roi_h5[number_of_channels*comp_index+channel_index].centroid_y-RANGE,self.roi_h5[number_of_channels*comp_index+channel_index].centroid_y+RANGE):
+                                if selected_cx[roi_idx] in range(centroid_x_position[comp_index]-RANGE, centroid_x_position[comp_index]+RANGE) and selected_cy[roi_idx] in range(centroid_y_position[comp_index]-RANGE, centroid_y_position[comp_index]+RANGE):    
                                     comp_check = True
                                     break
                                 #comp_index += 1
-                                # if comp_index == (int((len(old_z_index))/2) - 1):
+                                # if comp_index == (int((len(old_z_index))/number_of_channels) - 1):
                                 #     comp_index += 1
                                 
                                 
@@ -227,7 +228,7 @@ class PROCHIP_Measurement(Measurement):
                             
                             if comp_check == False: 
                                 
-                                if comp_index == (int((len(old_z_index))/2) - 1) and empty_check == 0:
+                                if comp_index == (int((len(old_z_index))/number_of_channels) - 1) and empty_check == 0:
                                     new_cell += 1
                                     if len(old_z_index) != 0:
                                         contained_rois = new_cell + comp_index
@@ -242,16 +243,16 @@ class PROCHIP_Measurement(Measurement):
                                         print('comp_index', comp_index)
                                         
                                         
-                                        #contained_rois = int((z_index_lenght - len(old_z_index))/2 - roi_in_image + comp_index) # OPPURE #contained_rois = int((len(z_index) - len(old_z_index))/2 - roi_in_image + comp_index)
-                                        #contained_rois = int((z_index_lenght - len(old_z_index))/2 - roi_in_image)
-                                        #contained_rois = roi_in_image + empty_check
-                                        contained_rois = roi_in_image
+                                        #contained_rois = int((z_index_lenght - len(old_z_index))/number_of_channels - roi_idx + comp_index) # OPPURE #contained_rois = int((len(z_index) - len(old_z_index))/number_of_channels - roi_idx + comp_index)
+                                        #contained_rois = int((z_index_lenght - len(old_z_index))/number_of_channels - roi_idx)
+                                        #contained_rois = roi_idx + empty_check
+                                        contained_rois = roi_idx
                                         
                                         print('contained_roi', contained_rois)
                                     
                                 #SE CREO SINGOLO DATASET PER VOLTA PROBLEMA QUANDO HO UNA SECONDA CELLULA MA STO GIA ANALIZZANDO IL SECONDO CANALE QUINDI z_index==old_z_index...    
-                                # self.roi_h5_dataset(roi_index+contained_rois, channel_index, roi_in_image)#, contained_rois)
-                                self.roi_h5_double_dataset(roi_index + contained_rois, roi_in_image)#, comp_index)
+                                # self.roi_h5_dataset(roi_index+contained_rois, channel_index, roi_idx)#, contained_rois)
+                                self.roi_h5_double_dataset(roi_index + contained_rois, roi_idx)#, comp_index)
                                     
                                 print('elements in roi_h5', len(self.roi_h5))
                                 
@@ -263,7 +264,7 @@ class PROCHIP_Measurement(Measurement):
                                 while len(z_index) < len(self.roi_h5):
                                     z_index.append(0)
                                     
-                                while len(centroid_x_position) < int((len(self.roi_h5))/2):
+                                while len(centroid_x_position) < int((len(self.roi_h5))/number_of_channels):
                                     centroid_x_position.append(0)   
                                     centroid_y_position.append(0)
                                 
@@ -274,7 +275,7 @@ class PROCHIP_Measurement(Measurement):
                                 #breakpoint()
 
                                 if empty_check == 1:
-                                    insert_position = 2*comp_index+channel_index
+                                    insert_position = number_of_channels*comp_index+channel_index
                                 else:
                                     insert_position = len(self.roi_h5) - len(self.channels) + channel_index
                                 
@@ -292,21 +293,21 @@ class PROCHIP_Measurement(Measurement):
                                 self.h5_roi_file.flush()
                                 z_index[insert_position] += 1
                                 
-                                centroid_x_position[int(insert_position/2)] = self.im.cx[roi_in_image]
-                                centroid_y_position[int(insert_position/2)] = self.im.cy[roi_in_image]
+                                centroid_x_position[int(insert_position/number_of_channels)] = selected_cx[roi_idx]
+                                centroid_y_position[int(insert_position/number_of_channels)] = selected_cy[roi_idx]
                                 
                                 print('ROI saved in a dataset, comp_check == False')
                                 
                             else:    # comp_check == False
-                                if z_index[2*comp_index+channel_index] != 0:
-                                    self.roi_h5[2*comp_index+channel_index].resize(self.roi_h5[2*comp_index+channel_index].shape[0]+1, axis = 0)
+                                if z_index[number_of_channels*comp_index+channel_index] != 0:
+                                    self.roi_h5[number_of_channels*comp_index+channel_index].resize(self.roi_h5[number_of_channels*comp_index+channel_index].shape[0]+1, axis = 0)
                                 
-                                self.roi_h5[2*comp_index+channel_index][z_index[2*comp_index+channel_index], :, :] = roi
+                                self.roi_h5[number_of_channels*comp_index+channel_index][z_index[number_of_channels*comp_index+channel_index], :, :] = roi
                                 self.h5_roi_file.flush()
-                                z_index[2*comp_index+channel_index] += 1
+                                z_index[number_of_channels*comp_index+channel_index] += 1
 
-                                centroid_x_position[int((2*comp_index+channel_index)/2)] = self.im.cx[roi_in_image]
-                                centroid_y_position[int((2*comp_index+channel_index)/2)] = self.im.cy[roi_in_image]
+                                centroid_x_position[int((number_of_channels*comp_index+channel_index)/number_of_channels)] = selected_cx[roi_idx]
+                                centroid_y_position[int((number_of_channels*comp_index+channel_index)/number_of_channels)] = selected_cy[roi_idx]
                                 
                                 print('ROI saved in a dataset, comp_check == True')
                         
@@ -314,12 +315,12 @@ class PROCHIP_Measurement(Measurement):
                             #contained_rois += 1
                         
                         
-                        for position in range(int((len(old_z_index))/2)): # FARLO SEMPRE OPPURE SOLO SE: # if num_rois < active_rois:
+                        for position in range(int((len(old_z_index))/number_of_channels)): # FARLO SEMPRE OPPURE SOLO SE: # if num_rois < active_rois:
                                 
                             # Past dimensions comparison to see if we have new cells. If not, delate these elements
                                 
-                            #check_pos = 2*(active_rois - position -1)
-                            check_pos = 2*(int((len(old_z_index))/2) - position -1)
+                            #check_pos = number_of_channels*(active_rois - position -1)
+                            check_pos = number_of_channels*(int((len(old_z_index))/number_of_channels) - position -1)
                                 
                             if old_z_index[check_pos + channel_index] == z_index[check_pos + channel_index]:
                                 del z_index[check_pos]
@@ -327,8 +328,8 @@ class PROCHIP_Measurement(Measurement):
                                 del self.roi_h5[check_pos]
                                 del self.roi_h5[check_pos]
                                    
-                                del centroid_x_position[int(check_pos/2)]
-                                del centroid_y_position[int(check_pos/2)]
+                                del centroid_x_position[int(check_pos/number_of_channels)]
+                                del centroid_y_position[int(check_pos/number_of_channels)]
                                    
                                 roi_index += 1
                                 # ELIMINARE ANCHE ELEMENTI CORRISPONDENTI DI roi_h5? SUPPONGO DI SI PER ORA...    
@@ -635,8 +636,8 @@ class PROCHIP_Measurement(Measurement):
         timestamp = time.strftime("%y%m%d_%H%M%S", time.localtime())
         sample = self.app.settings['sample']
         #sample_name = f'{timestamp}_{self.name}_{sample}.h5'
-        sample_name = '_'.join([timestamp, self.name, sample, '.h5'])
-        fname = os.path.join(self.app.settings['save_dir'], sample_name)
+        sample_name = '_'.join([timestamp, self.name, sample])
+        fname = os.path.join(self.app.settings['save_dir'], sample_name + '.h5')
         
         # file creation
         self.h5file = h5_io.h5_base_file(app=self.app, measurement=self, fname = fname)
@@ -716,7 +717,7 @@ class PROCHIP_Measurement(Measurement):
                 self.roi_h5[ch].attrs['element_size_um'] =  [self.settings['zsampling'],self.settings['ysampling'],self.settings['xsampling']]
                 self.roi_h5[ch].attrs['acq_time'] =  timestamp
                 self.roi_h5[c_index].attrs['centroid_x'] =  self.im.cx[0] # to be updated when multiple rois are saved
-                self.roi_h5[c_index].attrs['centroid_y'] =  self.im.cy[0]
+                self.roi_h5[c_index].attrs['centroid_y'] =  self.im.cy[0] # DA CAMBIARE CON selected_cx...
                 
         else:
              
@@ -736,11 +737,11 @@ class PROCHIP_Measurement(Measurement):
                 self.roi_h5[c_index].attrs['element_size_um'] =  [self.settings['zsampling'],self.settings['ysampling'],self.settings['xsampling']]
                 self.roi_h5[c_index].attrs['acq_time'] =  timestamp
                 self.roi_h5[c_index].attrs['centroid_x'] =  self.im.cx[0] # to be updated when multiple rois are saved
-                self.roi_h5[c_index].attrs['centroid_y'] =  self.im.cy[0]
+                self.roi_h5[c_index].attrs['centroid_y'] =  self.im.cy[0] # DA CAMBIARE CON selected_cx...
         
         
         
-    def roi_h5_double_dataset(self, t_index, roi_in_image):#, comp_index):#, contained_rois):    
+    def roi_h5_double_dataset(self, t_index, roi_idx):#, comp_index):#, contained_rois):    
         
         print('t_index passed to roi_h5_double_dataset: ', t_index)
         
@@ -753,8 +754,8 @@ class PROCHIP_Measurement(Measurement):
             fullname = self.h5_roi_group.name +'/'+ name
                 
             
-            for name_check_position in range (int((len(self.roi_h5))/2)): # FARLO SEMPRE OPPURE SOLO SE: #if len(self.roi_h5) > t_index + ch:
-                if self.roi_h5[name_check_position*2 + ch].name == fullname: #INDICE NON CORRETTO...CAMBIARE!!!
+            for name_check_position in range (int((len(self.roi_h5))/len(self.channels))): # FARLO SEMPRE OPPURE SOLO SE: #if len(self.roi_h5) > t_index + ch:
+                if self.roi_h5[name_check_position*len(self.channels) + ch].name == fullname: #INDICE NON CORRETTO...CAMBIARE!!!
                     print('return from the dataset function!!!')
                     return
                     
@@ -776,7 +777,7 @@ class PROCHIP_Measurement(Measurement):
             self.roi_h5[last_position].dims[2].label = "x"
             self.roi_h5[last_position].attrs['element_size_um'] =  [self.settings['xsampling'],self.settings['ysampling'],self.settings['zsampling']]
             self.roi_h5[last_position].attrs['acq_time'] =  time.time()
-            self.roi_h5[last_position].attrs['centroid_x'] =  self.im.cx[roi_in_image] # to be updated when multiple rois are saved
-            self.roi_h5[last_position].attrs['centroid_y'] =  self.im.cy[roi_in_image]
+            self.roi_h5[last_position].attrs['centroid_x'] =  self.im.cx[roi_idx] # to be updated when multiple rois are saved
+            self.roi_h5[last_position].attrs['centroid_y'] =  self.im.cy[roi_idx] # DA CAMBIARE CON selected_cx...
     
             print(name)
