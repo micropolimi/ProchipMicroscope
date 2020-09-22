@@ -151,9 +151,9 @@ class PROCHIP_Measurement(Measurement):
             centroid_x_position = []
             centroid_y_position = []
             
-            self.image_h5 = [None]*len(self.channels)    # prepare list to contain the image data to be saved in the h5file
-            
             number_of_channels = len(self.channels)
+            
+            self.image_h5 = [None]*number_of_channels    # prepare list to contain the image data to be saved in the h5file            
             
             while not self.interrupt_measurement_called:    # "run till abort" mode
             
@@ -190,6 +190,8 @@ class PROCHIP_Measurement(Measurement):
                         contained_rois = 0
                         
                         new_cell = 0
+                        
+                        #number_of_delayed_cells = 0
                         
                         while len(z_index) < num_rois*number_of_channels:
                             z_index.append(0)
@@ -230,37 +232,38 @@ class PROCHIP_Measurement(Measurement):
                                 
                                 if comp_index == (int((len(old_z_index))/number_of_channels) - 1) and empty_check == 0:
                                     new_cell += 1
-                                    if len(old_z_index) != 0:
-                                        contained_rois = new_cell + comp_index
-                                        
+                                    #if len(old_z_index) != 0:
+                                    contained_rois = new_cell + comp_index                                   
+                                    self.roi_h5_double_dataset(roi_index + contained_rois, roi_idx)#, comp_index)
+                                
+                                elif empty_check == 1:
+                                    #contained_rois = roi_idx + number_of_delayed_cells
+                                    pass
+                                
                                 else:
                                     
                                     #if len(self.roi_h5) != 0:
                                     #if len(old_z_index) != 0:
                                         
-                                        print('z_index lenght', len(z_index))
-                                        print('old_z_index lenght', len(old_z_index))
-                                        print('comp_index', comp_index)
-                                        
-                                        
-                                        #contained_rois = int((z_index_lenght - len(old_z_index))/number_of_channels - roi_idx + comp_index) # OPPURE #contained_rois = int((len(z_index) - len(old_z_index))/number_of_channels - roi_idx + comp_index)
-                                        #contained_rois = int((z_index_lenght - len(old_z_index))/number_of_channels - roi_idx)
-                                        #contained_rois = roi_idx + empty_check
-                                        contained_rois = roi_idx
-                                        
-                                        print('contained_roi', contained_rois)
+                                    print('z_index lenght', len(z_index))
+                                    print('old_z_index lenght', len(old_z_index))
+                                    print('comp_index', comp_index)
                                     
-                                #SE CREO SINGOLO DATASET PER VOLTA PROBLEMA QUANDO HO UNA SECONDA CELLULA MA STO GIA ANALIZZANDO IL SECONDO CANALE QUINDI z_index==old_z_index...    
-                                # self.roi_h5_dataset(roi_index+contained_rois, channel_index, roi_idx)#, contained_rois)
-                                self.roi_h5_double_dataset(roi_index + contained_rois, roi_idx)#, comp_index)
+                                    
+                                    #contained_rois = int((z_index_lenght - len(old_z_index))/number_of_channels - roi_idx + comp_index) # OPPURE #contained_rois = int((len(z_index) - len(old_z_index))/number_of_channels - roi_idx + comp_index)
+                                    #contained_rois = int((z_index_lenght - len(old_z_index))/number_of_channels - roi_idx)
+                                    #contained_rois = roi_idx + empty_check
+                                    contained_rois = roi_idx
+                                    
+                                    print('contained_roi', contained_rois)
+                                
+                                    #SE CREO SINGOLO DATASET PER VOLTA PROBLEMA QUANDO HO UNA SECONDA CELLULA MA STO GIA ANALIZZANDO IL SECONDO CANALE QUINDI z_index==old_z_index...    
+                                    # self.roi_h5_dataset(roi_index+contained_rois, channel_index, roi_idx)#, contained_rois)
+                                    self.roi_h5_double_dataset(roi_index + contained_rois, roi_idx)#, comp_index)
                                     
                                 print('elements in roi_h5', len(self.roi_h5))
-                                
-                                
-                                
-                                
-                                
-                                # NEW PART!!!
+
+
                                 while len(z_index) < len(self.roi_h5):
                                     z_index.append(0)
                                     
@@ -268,16 +271,14 @@ class PROCHIP_Measurement(Measurement):
                                     centroid_x_position.append(0)   
                                     centroid_y_position.append(0)
                                 
-                                
-                                
-                                
+
                                 
                                 #breakpoint()
 
                                 if empty_check == 1:
                                     insert_position = number_of_channels*comp_index+channel_index
                                 else:
-                                    insert_position = len(self.roi_h5) - len(self.channels) + channel_index
+                                    insert_position = len(self.roi_h5) - number_of_channels + channel_index
                                 
                                 if z_index[insert_position] != 0:
                                     self.roi_h5[insert_position].resize(self.roi_h5[insert_position].shape[0]+1, axis = 0)
@@ -314,6 +315,8 @@ class PROCHIP_Measurement(Measurement):
                         
                             #contained_rois += 1
                         
+                        # z_index_lenght = len(z_index)                        
+                        # delayed_cells_mask = [0]*int((len(old_z_index))/number_of_channels)
                         
                         for position in range(int((len(old_z_index))/number_of_channels)): # FARLO SEMPRE OPPURE SOLO SE: # if num_rois < active_rois:
                                 
@@ -332,7 +335,25 @@ class PROCHIP_Measurement(Measurement):
                                 del centroid_y_position[int(check_pos/number_of_channels)]
                                    
                                 roi_index += 1
-                                # ELIMINARE ANCHE ELEMENTI CORRISPONDENTI DI roi_h5? SUPPONGO DI SI PER ORA...    
+                                # ELIMINARE ANCHE ELEMENTI CORRISPONDENTI DI roi_h5? SUPPONGO DI SI PER ORA... 
+                                
+                                #delayed_cells_mask [position] = 1
+                                
+                             
+                                
+                             
+                            # flag_index = 0 
+                            # if delayed_cells_mask [flag_index] == 1:
+                            #     while delayed_cells_mask [flag_index] == 1:
+                            #         flag_index += 1
+                            #     flag_index += 1
+                            # while delayed_cells_mask [flag_index] == 0:
+                            #     flag_index += 1
+                            # flag_index += 1
+                            # while delayed_cells_mask [flag_index] == 1:
+                            #     number_of_delayed_cells += 1
+
+
                                                       
                             
                         print('WE ARE HERE!!!')
@@ -360,7 +381,7 @@ class PROCHIP_Measurement(Measurement):
                     # create and initialize h5file
                     self.initH5()
                     
-                    z_index = [0]*len(self.channels)    # list of indexes in which each element is the z index corresponding to a different channel
+                    z_index_h5 = [0]*number_of_channels    # list of indexes in which each element is the z index corresponding to a different channel
                     buffer_index = self.camera.hamamatsu.buffer_index + 1
                     
                     
@@ -371,8 +392,8 @@ class PROCHIP_Measurement(Measurement):
                                                 
                         ch_on_the_run = buffer_index%2 # 0 if the image is even, 1 if the image is odd, in the image stack
                         
-                        self.image_h5[ch_on_the_run][z_index[ch_on_the_run], :, :] = image_on_the_run  # saving to the h5 dataset
-                        z_index[ch_on_the_run] += 1
+                        self.image_h5[ch_on_the_run][z_index_h5[ch_on_the_run], :, :] = image_on_the_run  # saving to the h5 dataset
+                        z_index_h5[ch_on_the_run] += 1
                            
                         self.h5file.flush()
                         self.settings['progress'] = progress_index*100./self.camera.hamamatsu.number_image_buffers
@@ -385,7 +406,7 @@ class PROCHIP_Measurement(Measurement):
                     
                     # restart the acquisition
                     self.restart_triggered_Acquisition(freq1)
-                        
+                    
                     
         finally:
             
