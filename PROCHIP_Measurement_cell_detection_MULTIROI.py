@@ -659,7 +659,7 @@ class PROCHIP_Measurement(Measurement):
             self.roi_h5[last_position].dims[0].label = "z"
             self.roi_h5[last_position].dims[1].label = "y"
             self.roi_h5[last_position].dims[2].label = "x"
-            self.roi_h5[last_position].attrs['element_size_um'] =  [self.settings['xsampling'],self.settings['ysampling'],self.settings['zsampling']]
+            self.roi_h5[last_position].attrs['element_size_um'] =  [self.settings['zsampling'],self.settings['ysampling'],self.settings['xsampling']]
             self.roi_h5[last_position].attrs['acq_time'] =  time.time()
             self.roi_h5[last_position].attrs['centroid_x'] =  self.im.cx[roi_index]    # TO BE CHANGED with selected_cx...
             self.roi_h5[last_position].attrs['centroid_y'] =  self.im.cy[roi_index]    # TO BE CHANGED with selected_cy...
