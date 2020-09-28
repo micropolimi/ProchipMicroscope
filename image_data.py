@@ -16,9 +16,11 @@ class ImageManager:
         self.dim_h = dim_h
         self.dim_v = dim_v
         
-        self.contour = []    # list of contours of the detected cells
-        self.cx = []         # list of the x coordinates of the centroids of the detected cells
-        self.cy = []         # list of the y coordinates of the centroids of the detected cells
+        self.contour = []        # list of contours of the detected cells
+        self.cx = []             # list of the x coordinates of the centroids of the detected cells
+        self.cy = []             # list of the y coordinates of the centroids of the detected cells
+        self.selected_cx = []    # list of the x coordinates of the centroids of the detected cells to be saved (not at the boundary of our acquired frame)
+        self.selected_cy = []    # list of the y coordinates of the centroids of the detected cells to be saved (not at the boundary of our acquired frame)
         
         self.roi_half_side = half_side        # half dimension of the roi
         self.min_cell_size = min_cell_size    # minimum area that the object must have to be recognized as a cell
@@ -124,7 +126,10 @@ class ImageManager:
                     selected_cx.append(cx[indx])
                     selected_cy.append(cy[indx])
                     
-        return rois, selected_cx, selected_cy
+        self.selected_cx = selected_cx
+        self.selected_cy = selected_cy
+                    
+        return rois
     
     def highlight_channel(self,displayed_image):
         
