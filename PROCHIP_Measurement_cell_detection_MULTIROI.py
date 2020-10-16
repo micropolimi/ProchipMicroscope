@@ -158,7 +158,7 @@ class PROCHIP_Measurement(Measurement):
             while not self.interrupt_measurement_called:    # "run till abort" mode
             
                 [frames, _dims] = self.camera.hamamatsu.getFrames()
-                
+
                 # processing of each acquired image
                 for frame_index, frame in enumerate(frames):
                     
@@ -173,7 +173,7 @@ class PROCHIP_Measurement(Measurement):
                         self.im.find_cell(self.settings.selected_channel.val)
                      
                         
-                     
+                    
                     if self.settings['save_roi_h5']:
                         
                         # H5 file creation                        
@@ -643,7 +643,7 @@ class PROCHIP_Measurement(Measurement):
         # creation of one dataset for each channel
         for ch in range(number_of_channels):
         
-            name = 't' + str(t_index) + '/c' + str(ch) + '/roi'
+            name = f't{t_index:04d}/c{ch}/roi'
                 
             fullname = self.h5_roi_group.name +'/'+ name
                 
