@@ -1,0 +1,30 @@
+2020-12-21T11:54:02|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\measurement.py", line 25, in run
+    self.measurement._thread_run()
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\measurement.py", line 179, in _thread_run
+    self.run()
+  File "C:\LabPrograms\Python\PROCHIP_Microscope\PROCHIP_Measurement_cell_detection_MULTIROI.py", line 245, in run
+    self.roi_h5[insert_position][z_index[insert_position], :, :] = roi
+  File "h5py\_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py\_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\h5py\_hl\dataset.py", line 707, in __setitem__
+    for fspace in selection.broadcast(mshape):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\h5py\_hl\selections.py", line 299, in broadcast
+    raise TypeError("Can't broadcast %s -> %s" % (target_shape, self.mshape))
+TypeError: Can't broadcast (200, 200) -> (192, 192)
+
+2020-12-21T12:02:17|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\measurement.py", line 25, in run
+    self.measurement._thread_run()
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\measurement.py", line 179, in _thread_run
+    self.run()
+  File "C:\LabPrograms\Python\PROCHIP_Microscope\PROCHIP_Measurement_cell_detection_MULTIROI.py", line 245, in run
+    self.roi_h5[insert_position][z_index[insert_position], :, :] = roi
+  File "h5py\_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py\_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\h5py\_hl\dataset.py", line 707, in __setitem__
+    for fspace in selection.broadcast(mshape):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\h5py\_hl\selections.py", line 299, in broadcast
+    raise TypeError("Can't broadcast %s -> %s" % (target_shape, self.mshape))
+TypeError: Can't broadcast (192, 192) -> (200, 200)
+

@@ -33,6 +33,13 @@ class ImageManager:
         Determines if a region avove thresold is a cell, generates contours of the cells and their centroids cx and cy      
         """          
     
+    
+        # level_min = np.amin(self.image[ch])
+        # level_max = np.amax(self.image[ch])
+        # img_thres = np.clip(self.image[ch], level_min, level_max)
+        # image8bit = ((img_thres-level_min+1)/(level_max-level_min+1)*255).astype('uint8') 
+
+
         image8bit = (self.image[ch]/256).astype('uint8')
         
         _ret,thresh_pre = cv2.threshold(image8bit,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)

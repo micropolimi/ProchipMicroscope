@@ -1,0 +1,11 @@
+2020-12-15T16:56:15|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\hardware.py", line 208, in enable_connection
+    raise err
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\hardware.py", line 204, in enable_connection
+    self.connect()
+  File "C:\LabPrograms\Python\Hamamatsu_ScopeFoundry\CameraHardware.py", line 110, in connect
+    self.hamamatsu = HamamatsuDevice(camera_id=0, frame_x=self.subarrayh.val, frame_y=self.subarrayv.val, acquisition_mode=self.acquisition_mode.val,
+  File "C:\LabPrograms\Python\Hamamatsu_ScopeFoundry\CameraDevice.py", line 337, in __init__
+    raise DCAMException("DCAM initialization failed with error code " + str(error_code))
+Hamamatsu_ScopeFoundry.CameraDevice.DCAMException: DCAM initialization failed with error code -2147483130
+
