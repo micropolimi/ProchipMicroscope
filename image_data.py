@@ -8,20 +8,18 @@ class ImageManager:
     Class to be used to store the acquired images split in two channels and methods useful for cell identification and roi creation
     '''
 
-    def __init__(self,dim_h, dim_v, half_side, min_cell_size):
+    def __init__(self, dim_h, dim_v, half_side, min_cell_size, Nchannels = 2):
 
         zeros_im = np.zeros((dim_v,dim_h),dtype=np.uint16) 
         
-        self.image = [zeros_im, zeros_im]    # original 16 bit images from the two channels
+        self.image = [zeros_im] * Nchannels    # original 16 bit images from the two channels
         self.dim_h = dim_h
         self.dim_v = dim_v
         
-        self.contour = []        # list of contours of the detected cells
+        self.contours = []        # list of contours of the detected cells
         self.cx = []             # list of the x coordinates of the centroids of the detected cells
         self.cy = []             # list of the y coordinates of the centroids of the detected cells
-        self.selected_cx = []    # list of the x coordinates of the centroids of the detected cells to be saved (not at the boundary of our acquired frame)
-        self.selected_cy = []    # list of the y coordinates of the centroids of the detected cells to be saved (not at the boundary of our acquired frame)
-        
+         
         self.roi_half_side = half_side        # half dimension of the roi
         self.min_cell_size = min_cell_size    # minimum area that the object must have to be recognized as a cell
     
@@ -47,23 +45,38 @@ class ImageManager:
         kernel  = np.ones((3,3),np.uint8)
         thresh = cv2.morphologyEx(thresh_pre,cv2.MORPH_OPEN, kernel, iterations = 2)
         # morphological opening (remove noise)
-        contours, _hierarchy = cv2.findContours(thresh,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
+        cnts, _hierarchy = cv2.findContours(thresh,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
         cx = []
         cy = []            
-        contour =[]
+        contours = []
+        roi_half_side = self.roi_half_side
+        l = image8bit.shape
+        
        
-        for cnt in contours:
+        for cnt in cnts:
             
             M = cv2.moments(cnt)
             if M['m00'] >  int(self.min_cell_size):    # (M['m00'] gives the contour area, also as cv2.contourArea(cnt)
                 #extracts image center
-                cx.append(int(M['m10']/M['m00']))
-                cy.append(int(M['m01']/M['m00']))
-                contour.append(cnt)
+            
+                x0 = int(M['m10']/M['m00']) 
+                y0 = int(M['m01']/M['m00'])
+                x = int(x0 - roi_half_side) 
+                y = int(y0 - roi_half_side)
+                w = h = roi_half_side*2
+                    
+        
+                if x>0 and y>0 and x+w<l[1]-1 and y+h<l[0]-1:    # only rois far from edges are considered
+                    cx.append(x0)
+                    cy.append(y0)
+                    contours.append(cnt)
         
         self.cx = cx
         self.cy = cy 
-        self.contour = contour  
+        self.contours = contours  
+        # found_cell_num = len(contours)
+        # if found_cell_num > 0:
+        #     print('found this number of cells:',len(contours))
         
             
     
@@ -78,7 +91,7 @@ class ImageManager:
         cx = self.cx
         cy = self.cy 
         roi_half_side = self.roi_half_side
-        contour = self.contour
+        contours = self.contours
       
         displayed_image = cv2.cvtColor(image8bit,cv2.COLOR_GRAY2RGB)      
         
@@ -90,53 +103,42 @@ class ImageManager:
          
             w = h = roi_half_side*2
             
-            displayed_image = cv2.drawContours(displayed_image, [contour[indx]], 0, (0,256,0), 2) 
+            displayed_image = cv2.drawContours(displayed_image, [contours[indx]], 0, (0,256,0), 2) 
             
             if indx == 0:
                 color = (256,0,0)
             else: 
                 color = (0,0,256)
                 
-            cv2.rectangle(displayed_image,(x,y),(x+w,y+h),color,1)    
-        
+            cv2.rectangle(displayed_image,(x,y),(x+w,y+h),color,1)
             
         return displayed_image
     
     
     
-    def roi_creation(self, ch):
+    def roi_creation(self, ch, cx, cy):
         """ Input: 
         ch: selected channel
+        args: centroids cx and cy, if specified
             Output:
         rois: list of rois in the frame
         """          
         image16bit = self.image[ch]
-            
-        cx = self.cx
-        cy = self.cy 
+    
         roi_half_side = self.roi_half_side
-        
-        l = image16bit.shape
         rois = []
-        selected_cx = []
-        selected_cy = []
-        
         
         for indx, _val in enumerate(cx):
             x = int(cx[indx] - roi_half_side) 
             y = int(cy[indx] - roi_half_side)
             w = h = roi_half_side*2
-            
-            if x>0 and y>0 and x+w<l[1]-1 and y+h<l[0]-1:    # only rois far from edges are considered
-                    detail = image16bit [y:y+w, x:x+h]
-                    rois.append(detail)
-                    selected_cx.append(cx[indx])
-                    selected_cy.append(cy[indx])
-                    
-        self.selected_cx = selected_cx
-        self.selected_cy = selected_cy
+            detail = image16bit [y:y+w, x:x+h]
+            rois.append(detail)
                     
         return rois
+    
+    
+    
     
     def highlight_channel(self,displayed_image):
         

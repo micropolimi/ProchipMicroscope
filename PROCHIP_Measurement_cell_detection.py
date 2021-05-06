@@ -41,6 +41,7 @@ class PROCHIP_Measurement(Measurement):
         self.settings.New('xsampling', dtype=float, unit='um', initial=0.11)
         self.settings.New('ysampling', dtype=float, unit='um', initial=0.11)
         self.settings.New('zsampling', dtype=float, unit='um', initial=1.0)
+        self.settings.New('flowrate', dtype=float, unit='nl/s', initial=250.0)
         
         
         self.camera = self.app.hardware['HamamatsuHardware']
@@ -83,7 +84,7 @@ class PROCHIP_Measurement(Measurement):
         
         self.settings.selected_channel.connect_to_widget(self.ui.ch_doubleSpinBox)
         self.settings.captured_cells.connect_to_widget(self.ui.captured_doubleSpinBox) 
-        
+        self.settings.flowrate.connect_to_widget(self.ui.flowrate_doubleSpinBox)
         
         
     def pre_run(self):    
@@ -133,15 +134,15 @@ class PROCHIP_Measurement(Measurement):
             self.start_triggered_Acquisition(freq1)
             
             first_cycle = True    # it will become False when the roi_h5_file will be created
-                        
             z_index_roi = [0]*len(self.channels)    # list of z indexes in which each element is the z index corresponding to a different channel
             roi_index = 0      # absolute index of rois
             num_rois = 0       # number of rois detected in the current image
-            active_rois = 0    # number of rois detected in the previous image
+            num_active_rois = 0    # number of rois detected in the previous image
             self.roi_h5 = []      # content to be saved in the roi_h5_file
-            
             self.image_h5 = [None]*len(self.channels)    # prepare list to contain the image data to be saved in the h5file
-            
+            active_rois =[]
+            active_cx = []
+            active_cy = []
             
             while not self.interrupt_measurement_called:    # "run till abort" mode
             
@@ -169,33 +170,37 @@ class PROCHIP_Measurement(Measurement):
                             self.init_roi_h5()
                             first_cycle = False
                         
-                        # create a roi for each cell in the frame
-                        rois = self.im.roi_creation(channel_index)
+                        num_rois = len(self.im.contours)
+                        num_active_rois = len(active_rois)
                         
-                        num_rois = len(rois)
+                        if num_rois == num_active_rois:
+                            active_rois = self.im.roi_creation(channel_index, active_cx, active_cy)
+                        
+                        else:
+                            active_rois = self.im.roi_creation(channel_index, self.im.cx, self.im.cy)
+                            active_cx = self.im.cx
+                            active_cy = self.im.cy
                             
-                        for i, roi in enumerate(rois):
+                            
+                        for i, roi in enumerate(active_rois):
                             
                             # create a new dataset if we are dealing with a new cell
                             self.roi_h5_dataset(roi_index, channel_index)
                             
                             # dynamically increment the dimension of the "box" in which we are going to put a new roi image
-                            if z_index_roi[channel_index] != 0:
-                                
+                            if z_index_roi[channel_index] != 0:   
                                 self.roi_h5[channel_index].resize(self.roi_h5[channel_index].shape[0]+1, axis = 0)
                             
                             self.roi_h5[channel_index][z_index_roi[channel_index], :, :] = roi
                             self.h5_roi_file.flush()    # this allow us to open the h5 file also while it is not completely created yet
                             z_index_roi[channel_index] += 1
-                    
-                        # one cell is passed and finished, so update indexes for a new cell
-                        # this is thought for a single cell, multi rois are not managed
-                        if num_rois < active_rois:
-                           roi_index += 1
-                           z_index_roi = [0]*len(self.channels)
-                                                      
-                        active_rois = num_rois
                         
+                        if num_rois < num_active_rois:
+                           roi_index += 1
+                           z_index_roi = [0]*len(self.channels) 
+                        # one roi is disapperead: update indexes, ready for a new cell
+                        # this is thought for a single cell, multi rois are not always managed
+                         
                         self.settings['captured_cells'] = roi_index
   
                     
@@ -523,6 +528,7 @@ class PROCHIP_Measurement(Measurement):
                
             self.image_h5[ch_index].attrs['element_size_um'] =  [self.settings['zsampling'],self.settings['ysampling'],self.settings['xsampling']]
             self.image_h5[ch_index].attrs['acq_time'] =  timestamp
+            self.image_h5[ch_index].attrs['flowrate'] = self.settings['flowrate']
         
 
     
@@ -574,11 +580,12 @@ class PROCHIP_Measurement(Measurement):
                 
                 # dataset attributes
                 self.roi_h5[ch].attrs['element_size_um'] =  [self.settings['zsampling'],self.settings['ysampling'],self.settings['xsampling']]
+                self.roi_h5[ch].attrs['flowrate'] = self.settings['flowrate']
                 self.roi_h5[ch].attrs['acq_time'] =  timestamp
                 # self.roi_h5[c_index].attrs['centroid_x'] =  self.im.cx[0] # to be updated when multiple rois are saved
                 # self.roi_h5[c_index].attrs['centroid_y'] =  self.im.cy[0]
-                self.roi_h5[ch].attrs['centroid_x'] =  self.im.selected_cx[0] # to be updated when multiple rois are saved
-                self.roi_h5[ch].attrs['centroid_y'] =  self.im.selected_cy[0]
+                self.roi_h5[ch].attrs['centroid_x'] =  self.im.cx[0] # to be updated when multiple rois are saved
+                self.roi_h5[ch].attrs['centroid_y'] =  self.im.cy[0]
                 
         else:
              
@@ -596,9 +603,10 @@ class PROCHIP_Measurement(Measurement):
                 
                 # dataset attributes
                 self.roi_h5[c_index].attrs['element_size_um'] =  [self.settings['zsampling'],self.settings['ysampling'],self.settings['xsampling']]
+                self.roi_h5[c_index].attrs['flowrate'] = self.settings['flowrate']
                 self.roi_h5[c_index].attrs['acq_time'] =  timestamp
-                self.roi_h5[c_index].attrs['centroid_x'] =  self.im.selected_cx[0]    # to be updated when multiple rois are saved
-                self.roi_h5[c_index].attrs['centroid_y'] =  self.im.selected_cy[0]
+                self.roi_h5[c_index].attrs['centroid_x'] =  self.im.cx[0]    # to be updated when multiple rois are saved
+                self.roi_h5[c_index].attrs['centroid_y'] =  self.im.cy[0]
         
     
    

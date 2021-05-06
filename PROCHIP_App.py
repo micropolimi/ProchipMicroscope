@@ -1,7 +1,6 @@
 from ScopeFoundry import BaseMicroscopeApp
 
 
-
 class PROCHIP_App(BaseMicroscopeApp):
     
     name = 'PROCHIP_App'
@@ -12,6 +11,7 @@ class PROCHIP_App(BaseMicroscopeApp):
         from OBIS_ScopeFoundry.laser_hardware import LaserHW
         from NIdaqmx_ScopeFoundry.ni_do_hardware import NI_DO_hw
         from NIdaqmx_ScopeFoundry.ni_co_hardware import NI_CO_hw
+        from NIdaqmx_ScopeFoundry.ni_ao_hardware import NI_AO_hw
 
         self.add_hardware(HamamatsuHardware(self))
         self.add_hardware(LaserHW(self, name='Laser_0'))
@@ -19,19 +19,22 @@ class PROCHIP_App(BaseMicroscopeApp):
         self.add_hardware(NI_CO_hw(self, name='Counter_Output_0'))
         self.add_hardware(NI_CO_hw(self, name='Counter_Output_1'))
         self.add_hardware(NI_DO_hw(self, name='Digital_Output_0'))
-        #self.add_hardware(ElveflowHardware(self))
+        self.add_hardware(NI_AO_hw(self, name='Analog_Output_0'))
+       
         print("Adding Hardware Components")
         
         from Hamamatsu_ScopeFoundry.CameraMeasurement import HamamatsuMeasurement
         self.add_measurement(HamamatsuMeasurement(self))
        
-        from PROCHIP_Microscope.PROCHIP_Measurement_cell_detection_MULTIROI import PROCHIP_Measurement
+        from PROCHIP_Microscope.PROCHIP_Measurement_multichannel import PROCHIP_Multichannel_Measurement
+        self.add_measurement(PROCHIP_Multichannel_Measurement(self))
+        
+        from PROCHIP_Microscope.PROCHIP_Measurement_cell_detection import PROCHIP_Measurement
         self.add_measurement(PROCHIP_Measurement(self))
         
         from PROCHIP_Microscope.PROCHIP_Measurement_cell_detection_SINGLE_COLOR import PROCHIP_Single_Color_Measurement
         self.add_measurement(PROCHIP_Single_Color_Measurement(self))
-
-        
+       
         print("Adding measurement components")
         
         self.ui.show()

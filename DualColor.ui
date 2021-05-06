@@ -296,6 +296,29 @@
           <double>10000000000.000000000000000</double>
          </property>
         </widget>
+        <widget class="QDoubleSpinBox" name="flowrate_doubleSpinBox">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>100</y>
+           <width>91</width>
+           <height>20</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="flow_rate_label">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>100</y>
+           <width>71</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Flow rate</string>
+         </property>
+        </widget>
        </widget>
       </item>
      </layout>
