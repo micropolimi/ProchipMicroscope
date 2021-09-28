@@ -1,0 +1,184 @@
+2021-07-08T16:38:10|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\hardware.py", line 208, in enable_connection
+    raise err
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\hardware.py", line 204, in enable_connection
+    self.connect()
+  File "C:\LabPrograms\Python\OBIS_ScopeFoundry\laser_hardware.py", line 35, in connect
+    self.laser = LaserDevice(port=self.port.val, debug=self.debug_mode.val)
+  File "C:\LabPrograms\Python\OBIS_ScopeFoundry\laser_device.py", line 14, in __init__
+    self.ser = ser = serial.Serial(port=self.port, baudrate=921600,
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\serial\serialwin32.py", line 31, in __init__
+    super(Serial, self).__init__(*args, **kwargs)
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\serial\serialutil.py", line 240, in __init__
+    self.open()
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\serial\serialwin32.py", line 62, in open
+    raise SerialException("could not open port {!r}: {!r}".format(self.portstr, ctypes.WinError()))
+serial.serialutil.SerialException: could not open port 'COM7': FileNotFoundError(2, 'Impossibile trovare il file specificato.', None, 2)
+
+2021-07-08T16:55:19|WARNING|LoggedQuantity|present_output_power read_from_hardware called when not connected to hardware
+2021-07-08T17:04:27|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 434, in loadFile
+    self.load_h5_file()
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 238, in load_h5_file
+    available_datasets = self.open_PROCHIP_h5_file()
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 280, in open_PROCHIP_h5_file
+    available_datasets = self.set_dataset(idx = 0)
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 315, in set_dataset
+    self.imageRaw = stack
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 186, in imageRaw
+    xcorr = self.calculate_carrier(img_raw[:,frame_index,:,:]) # calculates the power spectrum of imageRaw for the first phase
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 475, in calculate_carrier
+    sum_prepared_comp[k, :, :] = sum_prepared_comp[k, :, :] + img[l, :, :] * M[k, l]
+ValueError: operands could not be broadcast together with shapes (512,512) (512,700) 
+
+2021-07-08T17:04:31|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 436, in loadFile
+    raise(OSError('Invalid file type'))
+OSError: Invalid file type
+
+2021-07-08T17:04:51|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 434, in loadFile
+    self.load_h5_file()
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 238, in load_h5_file
+    available_datasets = self.open_PROCHIP_h5_file()
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 280, in open_PROCHIP_h5_file
+    available_datasets = self.set_dataset(idx = 0)
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 315, in set_dataset
+    self.imageRaw = stack
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 186, in imageRaw
+    xcorr = self.calculate_carrier(img_raw[:,frame_index,:,:]) # calculates the power spectrum of imageRaw for the first phase
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 475, in calculate_carrier
+    sum_prepared_comp[k, :, :] = sum_prepared_comp[k, :, :] + img[l, :, :] * M[k, l]
+ValueError: operands could not be broadcast together with shapes (512,512) (512,700) 
+
+2021-07-08T17:05:09|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\logged_quantity.py", line 241, in update_value
+    self.hardware_set_func(self.val)
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 660, in setReconstructor
+    self.imageRaw = self.imageRaw # runs the imageRaw setter and updates shown images
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 186, in imageRaw
+    xcorr = self.calculate_carrier(img_raw[:,frame_index,:,:]) # calculates the power spectrum of imageRaw for the first phase
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 475, in calculate_carrier
+    sum_prepared_comp[k, :, :] = sum_prepared_comp[k, :, :] + img[l, :, :] * M[k, l]
+ValueError: operands could not be broadcast together with shapes (512,512) (512,700) 
+
+2021-07-08T17:05:24|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 436, in loadFile
+    raise(OSError('Invalid file type'))
+OSError: Invalid file type
+
+2021-07-08T17:05:42|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 436, in loadFile
+    raise(OSError('Invalid file type'))
+OSError: Invalid file type
+
+2021-07-08T17:05:47|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 436, in loadFile
+    raise(OSError('Invalid file type'))
+OSError: Invalid file type
+
+2021-07-08T17:05:54|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 434, in loadFile
+    self.load_h5_file()
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 238, in load_h5_file
+    available_datasets = self.open_PROCHIP_h5_file()
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 280, in open_PROCHIP_h5_file
+    available_datasets = self.set_dataset(idx = 0)
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 315, in set_dataset
+    self.imageRaw = stack
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 186, in imageRaw
+    xcorr = self.calculate_carrier(img_raw[:,frame_index,:,:]) # calculates the power spectrum of imageRaw for the first phase
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 475, in calculate_carrier
+    sum_prepared_comp[k, :, :] = sum_prepared_comp[k, :, :] + img[l, :, :] * M[k, l]
+ValueError: operands could not be broadcast together with shapes (512,512) (512,700) 
+
+2021-07-08T17:06:12|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 31, in inner
+    result = function(cls)
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 538, in calibration
+    self.h.calibrate(self.imageRaw[:,frame_index,:,:],self.isFindCarrier)
+  File "C:\LabPrograms\Python\HexSimProcessor\SIM_processing\hexSimProcessor.py", line 95, in calibrate
+    self._calibrate(img, findCarrier, useCupy = False)
+  File "C:\LabPrograms\Python\HexSimProcessor\SIM_processing\hexSimProcessor.py", line 102, in _calibrate
+    assert len(img) > 6
+AssertionError
+
+2021-07-08T17:06:26|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 31, in inner
+    result = function(cls)
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 713, in estimate_resolution
+    ciWF = ImageDecorr(self.imageWF, square_crop=True,pixel_size=pixelsizeWF)
+AttributeError: 'HexSimAnalysis' object has no attribute 'imageWF'
+
+2021-07-08T17:06:30|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 31, in inner
+    result = function(cls)
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 538, in calibration
+    self.h.calibrate(self.imageRaw[:,frame_index,:,:],self.isFindCarrier)
+  File "C:\LabPrograms\Python\HexSimProcessor\SIM_processing\hexSimProcessor.py", line 95, in calibrate
+    self._calibrate(img, findCarrier, useCupy = False)
+  File "C:\LabPrograms\Python\HexSimProcessor\SIM_processing\hexSimProcessor.py", line 102, in _calibrate
+    assert len(img) > 6
+AssertionError
+
+2021-07-08T17:06:59|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 31, in inner
+    result = function(cls)
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 538, in calibration
+    self.h.calibrate(self.imageRaw[:,frame_index,:,:],self.isFindCarrier)
+  File "C:\LabPrograms\Python\HexSimProcessor\SIM_processing\hexSimProcessor.py", line 95, in calibrate
+    self._calibrate(img, findCarrier, useCupy = False)
+  File "C:\LabPrograms\Python\HexSimProcessor\SIM_processing\hexSimProcessor.py", line 102, in _calibrate
+    assert len(img) > 6
+AssertionError
+
+2021-07-08T17:08:15|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 31, in inner
+    result = function(cls)
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 538, in calibration
+    self.h.calibrate(self.imageRaw[:,frame_index,:,:],self.isFindCarrier)
+  File "C:\LabPrograms\Python\HexSimProcessor\SIM_processing\hexSimProcessor.py", line 95, in calibrate
+    self._calibrate(img, findCarrier, useCupy = False)
+  File "C:\LabPrograms\Python\HexSimProcessor\SIM_processing\hexSimProcessor.py", line 102, in _calibrate
+    assert len(img) > 6
+AssertionError
+
+2021-07-08T17:10:14|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 31, in inner
+    result = function(cls)
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 538, in calibration
+    self.h.calibrate(self.imageRaw[:,frame_index,:,:],self.isFindCarrier)
+  File "C:\LabPrograms\Python\HexSimProcessor\SIM_processing\hexSimProcessor.py", line 95, in calibrate
+    self._calibrate(img, findCarrier, useCupy = False)
+  File "C:\LabPrograms\Python\HexSimProcessor\SIM_processing\hexSimProcessor.py", line 102, in _calibrate
+    assert len(img) > 6
+AssertionError
+
+2021-07-08T17:11:52|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 31, in inner
+    result = function(cls)
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 538, in calibration
+    self.h.calibrate(self.imageRaw[:,frame_index,:,:],self.isFindCarrier)
+  File "C:\LabPrograms\Python\HexSimProcessor\SIM_processing\hexSimProcessor.py", line 95, in calibrate
+    self._calibrate(img, findCarrier, useCupy = False)
+  File "C:\LabPrograms\Python\HexSimProcessor\SIM_processing\hexSimProcessor.py", line 102, in _calibrate
+    assert len(img) > 6
+AssertionError
+
+2021-07-08T17:15:57|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\hardware.py", line 208, in enable_connection
+    raise err
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\hardware.py", line 204, in enable_connection
+    self.connect()
+  File "C:\LabPrograms\Python\OBIS_ScopeFoundry\laser_hardware.py", line 35, in connect
+    self.laser = LaserDevice(port=self.port.val, debug=self.debug_mode.val)
+  File "C:\LabPrograms\Python\OBIS_ScopeFoundry\laser_device.py", line 14, in __init__
+    self.ser = ser = serial.Serial(port=self.port, baudrate=921600,
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\serial\serialwin32.py", line 31, in __init__
+    super(Serial, self).__init__(*args, **kwargs)
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\serial\serialutil.py", line 240, in __init__
+    self.open()
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\serial\serialwin32.py", line 62, in open
+    raise SerialException("could not open port {!r}: {!r}".format(self.portstr, ctypes.WinError()))
+serial.serialutil.SerialException: could not open port 'COM7': FileNotFoundError(2, 'Impossibile trovare il file specificato.', None, 2)
+

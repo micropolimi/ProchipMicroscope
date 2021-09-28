@@ -1,0 +1,2 @@
+2021-06-11T09:59:41|WARNING|LoggedQuantity|present_output_power read_from_hardware called when not connected to hardware
+2021-06-11T10:04:53|WARNING|LoggedQuantity|present_output_power read_from_hardware called when not connected to hardware

@@ -7,16 +7,16 @@ import numpy as np
 import os
 import time
 from PROCHIP_Microscope.image_data import ImageManager
+from numpy.fft import fft2, fftshift
 
-
-class PROCHIP_Multichannel_Measurement(Measurement):
+class PROCHIP_SIM_Measurement(Measurement):
     
-    name = "PROCHIP_multichannel"    
+    name = "PROCHIP_SIM"    
     
     def setup(self):
         
         "..." 
-        self.ui_filename = sibling_path(__file__, "Multichannel.ui")
+        self.ui_filename = sibling_path(__file__, "SIM.ui")
         self.ui = load_qt_ui_file(self.ui_filename)
         
         # settings creation
@@ -25,8 +25,6 @@ class PROCHIP_Multichannel_Measurement(Measurement):
         self.settings.New('channels_num', dtype=int, initial=3, 
                                              vmin = 1)
         
-        self.settings.New('autoscale_channel', dtype=int, initial=0, 
-                          vmin = 0, vmax = self.settings.channels_num.val)
         self.settings.New('auto_range', dtype=bool, initial=True)
         self.settings.New('auto_level', dtype=bool, initial=True)
         self.settings.New('level_min', dtype=int, initial=60)
@@ -43,7 +41,7 @@ class PROCHIP_Multichannel_Measurement(Measurement):
         
         self.settings.New('acq_freq', dtype=float, unit='Hz', initial=200)
         
-        self.settings.New('magnification', dtype=float, initial=63, spinbox_decimals= 2)  
+        self.settings.New('magnification', dtype=float, initial=60, spinbox_decimals= 2)  
         self.settings.New('pixelsize', dtype=float, initial=6.5, spinbox_decimals= 2, unit='um') #For Pointgrey Grasshopper CMOS the pixelsize is: 5.86um 
         self.settings.New('n', dtype=float, initial=1.46, spinbox_decimals= 3)  
         self.settings.New('NA', dtype=float, initial=1.1, spinbox_decimals= 3) 
@@ -54,6 +52,10 @@ class PROCHIP_Multichannel_Measurement(Measurement):
         self.settings.New('zsampling', dtype=float, unit='um', initial=1.0)
         self.settings.New('flowrate', dtype=float, unit='nl/min', initial=15.0)
         
+        
+        self.settings.New('phase_shift_delay', dtype=float, unit='s', initial=0.0025, spinbox_decimals= 5)
+        self.settings.New('duty_cycle', dtype=float, initial=0.001, spinbox_decimals= 5)
+        
         self.camera = self.app.hardware['HamamatsuHardware']
         
         self.display_update_period = self.settings['refresh_period']
@@ -63,7 +65,12 @@ class PROCHIP_Multichannel_Measurement(Measurement):
         self.ni_co_0 = self.app.hardware['Counter_Output_0']
         self.ni_co_1 = self.app.hardware['Counter_Output_1']
         self.ni_do_0 = self.app.hardware['Digital_Output_0']
-        self.ni_ao_0 = self.app.hardware['Analog_Output_0']   
+        self.ni_ao_0 = self.app.hardware['Analog_Output_0'] 
+        
+        
+        
+        
+        
           
     def setup_figure(self):
         """
@@ -78,7 +85,6 @@ class PROCHIP_Multichannel_Measurement(Measurement):
         self.settings.save_h5.connect_to_widget(self.ui.save_h5_checkBox)
         self.settings.save_roi_h5.connect_to_widget(self.ui.save_ROI_h5_checkBox)
         
-        self.settings.autoscale_channel.connect_to_widget(self.ui.autoscale_ch_doubleSpinBox)
         self.settings.auto_level.connect_to_widget(self.ui.autoLevels_checkBox0)
         self.settings.auto_range.connect_to_widget(self.ui.autoRange_checkBox0)
         self.settings.level_min.connect_to_widget(self.ui.min_doubleSpinBox0) 
@@ -87,6 +93,28 @@ class PROCHIP_Multichannel_Measurement(Measurement):
         self.settings.cell_detection_channel.connect_to_widget(self.ui.ch_doubleSpinBox)
         self.settings.captured_cells.connect_to_widget(self.ui.captured_doubleSpinBox) 
         self.settings.flowrate.connect_to_widget(self.ui.flowrate_doubleSpinBox)
+        
+        
+        imvs =[]
+        
+        imv0 = pg.ImageView()
+        imv0.ui.histogram.hide()
+        #imv0.ui.roiBtn.hide()
+        #imv0.ui.menuBtn.hide()
+        imvs.append(imv0)
+        
+        imv1 = pg.ImageView()
+        imv1.ui.histogram.hide()
+        imv1.ui.roiBtn.hide()
+        imv1.ui.menuBtn.hide()
+        
+        imvs.append(imv1)
+        self.imvs =imvs
+        self.ui.ImageLayout.layout().addWidget(self.imvs[0])
+        self.ui.SimLayout.layout().addWidget(self.imvs[1])
+        
+        
+        
            
     def pre_run(self):    
         '''
@@ -107,16 +135,8 @@ class PROCHIP_Multichannel_Measurement(Measurement):
                                  self.settings.min_cell_size.val,
                                  numChannels
                                  )
-        imvs =[]
-        for ch in self.channels:
-            plot = pg.PlotItem(title = f'channel{ch}')
-            imv = pg.ImageView(view = plot)
-            imv.ui.histogram.hide()
-            imv.ui.roiBtn.hide()
-            imv.ui.menuBtn.hide()
-            imv.show()
-            imvs.append(imv)
-        self.imvs = imvs
+        
+        
         self.settings['captured_cells'] = 0
     
     def run(self):
@@ -263,13 +283,7 @@ class PROCHIP_Multichannel_Measurement(Measurement):
             if self.settings['save_roi_h5']:
                 self.h5_roi_file.close()
                 self.settings['save_roi_h5'] = False
-                             
-    def post_run(self):
-        '''
-        Close all the figures after the run ended
-        '''
-        for imv in self.imvs:
-            imv.close()
+                  
             
     def update_display(self):
         """
@@ -278,38 +292,45 @@ class PROCHIP_Multichannel_Measurement(Measurement):
         Its update frequency is defined by self.display_update_period.
         """
         
-        for ch in self.channels:
+        imv0 = self.imvs[0]
+        ch = self.settings.cell_detection_channel.val
+        image16bit = self.im.image[ch]
             
-            if self.settings.auto_level.val:
-                autoscale_channel = self.settings.autoscale_channel.val
-                level_min = np.amin(self.im.image[autoscale_channel])
-                level_max = np.amax(self.im.image[autoscale_channel])
-                self.settings['level_min'] = level_min    
-                self.settings['level_max'] = level_max
-            
-            else:
-                # if autolevel is OFF, normalize the image to the choosen values     
-                level_min = self.settings['level_min']
-                level_max = self.settings['level_max']
-            
-            # note that these levels are uint16, but the visulaized image is uint8, for compatibility with opencv processing (contours and rectangles annotations) 
-            # thresolding is required if autolevel is OFF; it could be avoided if autolevel is ON
-            img_thres = np.clip(self.im.image[ch], level_min, level_max)
-            
-            # conversion to 8bit is done here for compatibility with opencv    
-            image8bit_normalized = ((img_thres-level_min+1)/(level_max-level_min+1)*255).astype('uint8') 
-            
-            # creation of the image with open cv annotations, ready to be displayed
-            displayed_image = self.im.draw_contours_on_image(image8bit_normalized)
+        if self.settings.auto_level.val:
+            level_min = np.amin(image16bit)
+            level_max = np.amax(image16bit)
+            self.settings['level_min'] = level_min    
+            self.settings['level_max'] = level_max
+        
+        else:
+            # if autolevel is OFF, normalize the image to the choosen values     
+            level_min = self.settings['level_min']
+            level_max = self.settings['level_max']
+        
          
-            # display the image with a frame around the figure corresponding to the channel selected to do the find_cell operation (cell_detection_channel)
-            if ch == self.settings.cell_detection_channel.val:
-                #cv2.rectangle(displayed_image,(0,0),(self.eff_subarrayh-1,self.eff_subarrayv-1),(255,255,0),3) 
-                self.im.highlight_channel(displayed_image)
+        img_thres = np.clip(image16bit, level_min, level_max)
             
-            self.imvs[ch].setImage(displayed_image,
-                          autoLevels=False,
-                          autoRange=self.settings['auto_range'], levels=(0,255))                
+        # conversion to 8bit is done here for compatibility with opencv    
+        image8bit_normalized = ((img_thres-level_min+1)/(level_max-level_min+1)*255).astype('uint8') 
+            
+        # creation of the image with open cv annotations, ready to be displayed
+        displayed_image = self.im.draw_contours_on_image(image8bit_normalized)
+            
+        imv0.setImage(displayed_image,
+                      autoLevels=False,
+                      autoRange=self.settings['auto_range'], levels=(0,255)) 
+        
+        imv1 = self.imvs[1]
+        spectrum = self.calculate_spectrum(image16bit)
+        imv1.setImage(spectrum, autoLevels=True, autoRange=True) 
+
+    def calculate_spectrum(self, img):
+        """
+        Calculates power spectrum of the image
+        """
+        epsilon = 1e-6 # to avoid divition by zero error
+        ps = np.log((np.abs(fftshift(fft2(img))))**2+epsilon) 
+        return ps        
            
     def start_laser(self, laserHW):
         ''' Laser is prepared for digital modulation at the power specified. Laser is turned OFF before''' 
@@ -324,12 +345,34 @@ class PROCHIP_Multichannel_Measurement(Measurement):
             laserHW.laser_status.val = 'ON'
             laserHW.laser_status.write_to_hardware()
             laserHW.read_from_hardware()
+            
+            
+    def start_laser_CW(self,laserHW):
+        
+        
+        if laserHW.connected.val:    # TODO, add to digital controlled laser.
+        
+            # TODO use laser in modulation mode
+            laserHW.operating_mode.val = 'CWP'
+            laserHW.operating_mode.write_to_hardware()
+            laserHW.laser_status.val = 'ON'
+            laserHW.laser_status.write_to_hardware()
+            laserHW.read_from_hardware()
+            
+        
         
     def stop_laser(self, laserHW):
         ''' Laser is turned off '''   
         if laserHW.connected.val:    # do this only if the laser was connected by the user!
-            laserHW.laser_status.val = 'OFF' 
-            laserHW.laser_status.write_to_hardware()         
+            
+            laserHW.laser_status.val = 'OFF'
+            laserHW.laser_status.write_to_hardware()
+            laserHW.operating_mode.val = 'CWP'
+            laserHW.operating_mode.write_to_hardware()
+            
+            laserHW.read_from_hardware()
+        
+        
              
     def start_digital_rising_edge(self, digitalHW):
         '''The digital output of the DAQ start a rising edge procedure at the channel set by the user '''
@@ -377,21 +420,24 @@ class PROCHIP_Multichannel_Measurement(Measurement):
         self.camera.tractive.write_to_hardware()     
         self.camera.read_from_hardware()
         self.camera.hamamatsu.startAcquisition()
-        self.start_laser(self.laser_0)
-        self.start_laser(self.laser_1)
+        # self.start_laser(self.laser_0) #TODO restore laser digital trigger
+        self.start_laser_CW(self.laser_0)
+        #self.start_laser(self.laser_1)
         self.start_triggers(freq1)
-             
+               
     def start_triggers(self,freq1):
-        #TODO check the connection of the cables and the triggers
-        t_readout = self.camera.hamamatsu.getPropertyValue("internal_line_interval")[0]
-        camera_dutycycle = freq1*t_readout*self.camera.subarrayv.val
-        # dutycycle for simple laser switch hardware
-        camera_dutycycle=0.5 #TODO write correct sync to laser, A0 and camera
-        self.start_triggered_counter_task(self.ni_co_0, initial_delay=0.0000, freq=freq1, duty_cycle=camera_dutycycle)
-        # counterOutput2 used to control 2 lasers via 1 signal and a duplication port with a buffer and a NOT. 
-        self.start_triggered_counter_task(self.ni_co_1, initial_delay=0.00003896, freq=freq1/2, duty_cycle=0.5)
-        #TODO leave ni_co_1 always on ?? 
+        # assume standard Prochip cpnnection with logic port
+        # used in SIM acquisition with a single laser
+        delay = self.settings.phase_shift_delay.val
         
+        duty_cycle0 = self.settings.duty_cycle.val
+        
+        
+        #
+        # duty_cycle0 = freq1*delay
+        # dutycycle for simple laser switch hardware
+        self.start_triggered_counter_task(self.ni_co_0, initial_delay=delay, freq=freq1, duty_cycle=duty_cycle0)
+        #self.start_triggered_counter_task(self.ni_co_1, initial_delay=0.00003896, freq=freq1, duty_cycle=duty_cycle1) # TODO duty cyle set to 0.01 or 0.99 depending on the operating laser 
         self.start_triggered_AO_task(self.ni_ao_0, freq1)
         self.start_digital_rising_edge(self.ni_do_0)
       
@@ -446,14 +492,17 @@ class PROCHIP_Multichannel_Measurement(Measurement):
         number_of_channels = self.settings.channels_num.val
         
         # take as third dimension of the file the total number of images collected in the buffer
-        if self.camera.hamamatsu.last_frame_number < self.camera.hamamatsu.number_image_buffers:
-            length = int((self.camera.hamamatsu.last_frame_number+1)/number_of_channels)
-        else:
-            length=self.camera.hamamatsu.number_image_buffers/number_of_channels 
-                   
+        # if self.camera.hamamatsu.last_frame_number < self.camera.hamamatsu.number_image_buffers:
+        #     length = int((self.camera.hamamatsu.last_frame_number+1)/number_of_channels)
+        # else:
+        #     length=self.camera.hamamatsu.number_image_buffers/number_of_channels #TODO make this work with high number of channels
+        
+        length = self.camera.hamamatsu.number_frames//self.settings.channels_num.val
+
+           
         for ch_index  in self.channels:
             
-            name = f't0/c{ch_index}/image'
+            name = f't0000/c{ch_index}/image'
             
             self.image_h5[ch_index] = self.h5_group.create_dataset( name  = name, 
                                                       shape = ( length, img_size[0], img_size[1]),

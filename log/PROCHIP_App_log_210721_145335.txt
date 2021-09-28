@@ -1,0 +1,85 @@
+2021-07-21T14:53:54|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\hardware.py", line 208, in enable_connection
+    raise err
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\hardware.py", line 204, in enable_connection
+    self.connect()
+  File "C:\LabPrograms\Python\OBIS_ScopeFoundry\laser_hardware.py", line 35, in connect
+    self.laser = LaserDevice(port=self.port.val, debug=self.debug_mode.val)
+  File "C:\LabPrograms\Python\OBIS_ScopeFoundry\laser_device.py", line 14, in __init__
+    self.ser = ser = serial.Serial(port=self.port, baudrate=921600,
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\serial\serialwin32.py", line 31, in __init__
+    super(Serial, self).__init__(*args, **kwargs)
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\serial\serialutil.py", line 240, in __init__
+    self.open()
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\serial\serialwin32.py", line 78, in open
+    self._reconfigure_port()
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\serial\serialwin32.py", line 220, in _reconfigure_port
+    raise SerialException(
+serial.serialutil.SerialException: Cannot configure port, something went wrong. Original message: OSError(22, 'Parametro non corretto.', None, 87)
+
+2021-07-21T14:53:55|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\hardware.py", line 208, in enable_connection
+    raise err
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\hardware.py", line 204, in enable_connection
+    self.connect()
+  File "C:\LabPrograms\Python\NIdaqmx_ScopeFoundry\ni_do_hardware.py", line 27, in connect
+    self.DO_device = NI_DO_device(channel=self.channel.val, debug=self.debug_mode.val)
+  File "C:\LabPrograms\Python\NIdaqmx_ScopeFoundry\ni_do_device.py", line 15, in __init__
+    self.Task()
+  File "C:\LabPrograms\Python\NIdaqmx_ScopeFoundry\ni_do_device.py", line 22, in Task
+    self.task.do_channels.add_do_chan(lines=self.channel)
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\nidaqmx\_task_modules\do_channel_collection.py", line 103, in add_do_chan
+    check_for_error(error_code)
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\nidaqmx\errors.py", line 127, in check_for_error
+    raise DaqError(error_buffer.value.decode("utf-8"), error_code)
+nidaqmx.errors.DaqError: Device cannot be accessed.  Possible causes:
+Device is no longer present in the system.
+Device is not powered.
+Device is powered, but was temporarily without power.
+Device and/or chassis driver support may have been removed.
+Device is damaged.
+Ensure the device is properly connected and turned on. Ensure the device and/or chassis is supported in the current version of the driver. Check the device's status in NI MAX. Turn the computer off and on again. If you suspect that the device is damaged, contact National Instruments at ni.com/support.
+Device Specified: Dev1
+
+Task Name: _unnamedTask<2>
+
+Status Code: -201003
+
+2021-07-21T14:53:58|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\hardware.py", line 208, in enable_connection
+    raise err
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\hardware.py", line 204, in enable_connection
+    self.connect()
+  File "C:\LabPrograms\Python\OBIS_ScopeFoundry\laser_hardware.py", line 35, in connect
+    self.laser = LaserDevice(port=self.port.val, debug=self.debug_mode.val)
+  File "C:\LabPrograms\Python\OBIS_ScopeFoundry\laser_device.py", line 14, in __init__
+    self.ser = ser = serial.Serial(port=self.port, baudrate=921600,
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\serial\serialwin32.py", line 31, in __init__
+    super(Serial, self).__init__(*args, **kwargs)
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\serial\serialutil.py", line 240, in __init__
+    self.open()
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\serial\serialwin32.py", line 62, in open
+    raise SerialException("could not open port {!r}: {!r}".format(self.portstr, ctypes.WinError()))
+serial.serialutil.SerialException: could not open port 'COM7': FileNotFoundError(2, 'Impossibile trovare il file specificato.', None, 2)
+
+2021-07-21T14:54:39|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\measurement.py", line 25, in run
+    self.measurement._thread_run()
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\measurement.py", line 179, in _thread_run
+    self.run()
+  File "C:\LabPrograms\Python\PROCHIP_Microscope\PROCHIP_Measurement_SIM.py", line 279, in run
+    self.stop_triggered_Acquisition()
+  File "C:\LabPrograms\Python\PROCHIP_Microscope\PROCHIP_Measurement_SIM.py", line 467, in stop_triggered_Acquisition
+    self.stop_laser(self.laser_0)
+  File "C:\LabPrograms\Python\PROCHIP_Microscope\PROCHIP_Measurement_SIM.py", line 381, in stop_laser
+    laserHW.operating_mode.write_to_hardware()
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\logged_quantity.py", line 174, in write_to_hardware
+    self.hardware_set_func(self.val)
+  File "C:\LabPrograms\Python\OBIS_ScopeFoundry\laser_device.py", line 139, in select_operating_mode
+    fullresp = self.write_cmd('SOURce:AM:INTernal '+cmd)
+  File "C:\LabPrograms\Python\OBIS_ScopeFoundry\laser_device.py", line 26, in write_cmd
+    echo = self.ser.readline()
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\serial\serialwin32.py", line 269, in read
+    win32.ResetEvent(self._overlapped_read.hEvent)
+AttributeError: 'NoneType' object has no attribute 'hEvent'
+

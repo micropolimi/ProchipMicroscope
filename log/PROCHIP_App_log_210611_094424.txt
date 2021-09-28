@@ -1,0 +1,39 @@
+2021-06-11T09:44:43|WARNING|LoggedQuantity|present_output_power read_from_hardware called when not connected to hardware
+2021-06-11T09:46:02|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\measurement.py", line 25, in run
+    self.measurement._thread_run()
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\measurement.py", line 179, in _thread_run
+    self.run()
+  File "C:\LabPrograms\Python\PROCHIP_Microscope\PROCHIP_Measurement_SIM.py", line 148, in run
+    self.start_triggered_Acquisition(freq1)
+  File "C:\LabPrograms\Python\PROCHIP_Microscope\PROCHIP_Measurement_SIM.py", line 399, in start_triggered_Acquisition
+    self.start_triggers(freq1)
+  File "C:\LabPrograms\Python\PROCHIP_Microscope\PROCHIP_Measurement_SIM.py", line 408, in start_triggers
+    self.start_triggered_counter_task(self.ni_co_0, initial_delay=0.0, freq=freq1, duty_cycle=dutycycle0)
+  File "C:\LabPrograms\Python\PROCHIP_Microscope\PROCHIP_Measurement_SIM.py", line 366, in start_triggered_counter_task
+    counterHW.start()
+  File "C:\LabPrograms\Python\NIdaqmx_ScopeFoundry\ni_co_hardware.py", line 66, in start
+    self.CO_device.start_task()
+  File "C:\LabPrograms\Python\NIdaqmx_ScopeFoundry\ni_co_device.py", line 46, in start_task
+    self.Task()
+  File "C:\LabPrograms\Python\NIdaqmx_ScopeFoundry\ni_co_device.py", line 31, in Task
+    self.task.co_channels.add_co_pulse_chan_freq(counter=self.channel,
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\nidaqmx\_task_modules\co_channel_collection.py", line 101, in add_co_pulse_chan_freq
+    check_for_error(error_code)
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\nidaqmx\errors.py", line 127, in check_for_error
+    raise DaqError(error_buffer.value.decode("utf-8"), error_code)
+nidaqmx.errors.DaqError: Requested value is not a supported value for this property. The property value may be invalid because it conflicts with another property.
+Property: DAQmx_CO_Pulse_DutyCyc
+Requested Value:  2.500000
+Maximum Value:  999.999881e-3
+Minimum Value:  119.209297e-9
+Channel Name: Dev2/ctr1
+
+Task Name: _unnamedTask<5>
+
+Status Code: -200077
+
+2021-06-11T09:48:08|WARNING|LoggedQuantity|present_output_power read_from_hardware called when not connected to hardware
+2021-06-11T09:57:35|WARNING|LoggedQuantity|present_output_power read_from_hardware called when not connected to hardware
+2021-06-11T09:59:41|WARNING|LoggedQuantity|present_output_power read_from_hardware called when not connected to hardware
+2021-06-11T10:04:53|WARNING|LoggedQuantity|present_output_power read_from_hardware called when not connected to hardware

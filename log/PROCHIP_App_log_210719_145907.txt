@@ -1,0 +1,161 @@
+2021-07-19T14:59:15|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\hardware.py", line 208, in enable_connection
+    raise err
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\hardware.py", line 204, in enable_connection
+    self.connect()
+  File "C:\LabPrograms\Python\OBIS_ScopeFoundry\laser_hardware.py", line 35, in connect
+    self.laser = LaserDevice(port=self.port.val, debug=self.debug_mode.val)
+  File "C:\LabPrograms\Python\OBIS_ScopeFoundry\laser_device.py", line 14, in __init__
+    self.ser = ser = serial.Serial(port=self.port, baudrate=921600,
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\serial\serialwin32.py", line 31, in __init__
+    super(Serial, self).__init__(*args, **kwargs)
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\serial\serialutil.py", line 240, in __init__
+    self.open()
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\serial\serialwin32.py", line 62, in open
+    raise SerialException("could not open port {!r}: {!r}".format(self.portstr, ctypes.WinError()))
+serial.serialutil.SerialException: could not open port 'COM7': FileNotFoundError(2, 'Impossibile trovare il file specificato.', None, 2)
+
+2021-07-19T15:53:33|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 434, in loadFile
+    self.load_h5_file()
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 238, in load_h5_file
+    available_datasets = self.open_PROCHIP_h5_file()
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 280, in open_PROCHIP_h5_file
+    available_datasets = self.set_dataset(idx = 0)
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 315, in set_dataset
+    self.imageRaw = stack
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 186, in imageRaw
+    xcorr = self.calculate_carrier(img_raw[:,frame_index,:,:]) # calculates the power spectrum of imageRaw for the first phase
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 475, in calculate_carrier
+    sum_prepared_comp[k, :, :] = sum_prepared_comp[k, :, :] + img[l, :, :] * M[k, l]
+ValueError: operands could not be broadcast together with shapes (512,512) (512,700) 
+
+2021-07-19T15:55:58|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 434, in loadFile
+    self.load_h5_file()
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 238, in load_h5_file
+    available_datasets = self.open_PROCHIP_h5_file()
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 280, in open_PROCHIP_h5_file
+    available_datasets = self.set_dataset(idx = 0)
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 315, in set_dataset
+    self.imageRaw = stack
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 186, in imageRaw
+    xcorr = self.calculate_carrier(img_raw[:,frame_index,:,:]) # calculates the power spectrum of imageRaw for the first phase
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 475, in calculate_carrier
+    sum_prepared_comp[k, :, :] = sum_prepared_comp[k, :, :] + img[l, :, :] * M[k, l]
+ValueError: operands could not be broadcast together with shapes (512,512) (512,700) 
+
+2021-07-19T15:56:03|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 31, in inner
+    result = function(cls)
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 533, in calibration
+    self.setReconstructor()
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 660, in setReconstructor
+    self.imageRaw = self.imageRaw # runs the imageRaw setter and updates shown images
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 186, in imageRaw
+    xcorr = self.calculate_carrier(img_raw[:,frame_index,:,:]) # calculates the power spectrum of imageRaw for the first phase
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 475, in calculate_carrier
+    sum_prepared_comp[k, :, :] = sum_prepared_comp[k, :, :] + img[l, :, :] * M[k, l]
+ValueError: operands could not be broadcast together with shapes (512,512) (512,700) 
+
+2021-07-19T15:58:29|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 434, in loadFile
+    self.load_h5_file()
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 238, in load_h5_file
+    available_datasets = self.open_PROCHIP_h5_file()
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 280, in open_PROCHIP_h5_file
+    available_datasets = self.set_dataset(idx = 0)
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 315, in set_dataset
+    self.imageRaw = stack
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 186, in imageRaw
+    xcorr = self.calculate_carrier(img_raw[:,frame_index,:,:]) # calculates the power spectrum of imageRaw for the first phase
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 475, in calculate_carrier
+    sum_prepared_comp[k, :, :] = sum_prepared_comp[k, :, :] + img[l, :, :] * M[k, l]
+ValueError: operands could not be broadcast together with shapes (512,512) (512,700) 
+
+2021-07-19T16:01:04|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 434, in loadFile
+    self.load_h5_file()
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 238, in load_h5_file
+    available_datasets = self.open_PROCHIP_h5_file()
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 280, in open_PROCHIP_h5_file
+    available_datasets = self.set_dataset(idx = 0)
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 315, in set_dataset
+    self.imageRaw = stack
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 186, in imageRaw
+    xcorr = self.calculate_carrier(img_raw[:,frame_index,:,:]) # calculates the power spectrum of imageRaw for the first phase
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 475, in calculate_carrier
+    sum_prepared_comp[k, :, :] = sum_prepared_comp[k, :, :] + img[l, :, :] * M[k, l]
+ValueError: operands could not be broadcast together with shapes (512,512) (512,700) 
+
+2021-07-19T16:01:58|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 434, in loadFile
+    self.load_h5_file()
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 238, in load_h5_file
+    available_datasets = self.open_PROCHIP_h5_file()
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 280, in open_PROCHIP_h5_file
+    available_datasets = self.set_dataset(idx = 0)
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 315, in set_dataset
+    self.imageRaw = stack
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 186, in imageRaw
+    xcorr = self.calculate_carrier(img_raw[:,frame_index,:,:]) # calculates the power spectrum of imageRaw for the first phase
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 475, in calculate_carrier
+    sum_prepared_comp[k, :, :] = sum_prepared_comp[k, :, :] + img[l, :, :] * M[k, l]
+ValueError: operands could not be broadcast together with shapes (512,512) (512,700) 
+
+2021-07-19T16:18:59|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\measurement.py", line 244, in start_stop
+    self._start()
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\measurement.py", line 134, in _start
+    raise RuntimeError("Cannot start a new measurement while still measuring")
+RuntimeError: Cannot start a new measurement while still measuring
+
+2021-07-19T17:31:25|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\logged_quantity.py", line 241, in update_value
+    self.hardware_set_func(self.val)
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 311, in set_dataset
+    raise(ValueError)
+ValueError
+
+2021-07-19T17:31:32|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\logged_quantity.py", line 241, in update_value
+    self.hardware_set_func(self.val)
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 311, in set_dataset
+    raise(ValueError)
+ValueError
+
+2021-07-19T17:37:42|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\logged_quantity.py", line 241, in update_value
+    self.hardware_set_func(self.val)
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 311, in set_dataset
+    raise(ValueError)
+ValueError
+
+2021-07-19T19:19:28|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\logged_quantity.py", line 241, in update_value
+    self.hardware_set_func(self.val)
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 311, in set_dataset
+    raise(ValueError)
+ValueError
+
+2021-07-19T19:19:44|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\logged_quantity.py", line 241, in update_value
+    self.hardware_set_func(self.val)
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 311, in set_dataset
+    raise(ValueError)
+ValueError
+
+2021-07-19T19:19:56|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\logged_quantity.py", line 241, in update_value
+    self.hardware_set_func(self.val)
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 311, in set_dataset
+    raise(ValueError)
+ValueError
+
+2021-07-19T19:28:56|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\logged_quantity.py", line 241, in update_value
+    self.hardware_set_func(self.val)
+  File "C:\LabPrograms\Python\HexSimAnalyser\HexSimAnalyser_measurement.py", line 311, in set_dataset
+    raise(ValueError)
+ValueError
+
