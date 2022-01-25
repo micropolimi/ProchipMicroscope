@@ -1,0 +1,16 @@
+2021-10-29T18:32:20|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\LabPrograms\Python\Hamamatsu_ScopeFoundry\CameraMeasurement.py", line 106, in run
+    self.camera.hamamatsu.startAcquisition()
+AttributeError: 'HamamatsuHardware' object has no attribute 'hamamatsu'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\measurement.py", line 25, in run
+    self.measurement._thread_run()
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\measurement.py", line 179, in _thread_run
+    self.run()
+  File "C:\LabPrograms\Python\Hamamatsu_ScopeFoundry\CameraMeasurement.py", line 198, in run
+    self.camera.hamamatsu.stopAcquisition()
+AttributeError: 'HamamatsuHardware' object has no attribute 'hamamatsu'
+

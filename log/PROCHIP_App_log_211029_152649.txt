@@ -1,0 +1,90 @@
+2021-10-29T15:26:57|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\hardware.py", line 208, in enable_connection
+    raise err
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\hardware.py", line 204, in enable_connection
+    self.connect()
+  File "C:\LabPrograms\Python\OBIS_ScopeFoundry\laser_hardware.py", line 35, in connect
+    self.laser = LaserDevice(port=self.port.val, debug=self.debug_mode.val)
+  File "C:\LabPrograms\Python\OBIS_ScopeFoundry\laser_device.py", line 14, in __init__
+    self.ser = ser = serial.Serial(port=self.port, baudrate=921600,
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\serial\serialwin32.py", line 31, in __init__
+    super(Serial, self).__init__(*args, **kwargs)
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\serial\serialutil.py", line 240, in __init__
+    self.open()
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\serial\serialwin32.py", line 62, in open
+    raise SerialException("could not open port {!r}: {!r}".format(self.portstr, ctypes.WinError()))
+serial.serialutil.SerialException: could not open port 'COM6': PermissionError(13, 'Accesso negato.', None, 5)
+
+2021-10-29T15:26:58|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\hardware.py", line 208, in enable_connection
+    raise err
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\hardware.py", line 204, in enable_connection
+    self.connect()
+  File "C:\LabPrograms\Python\OBIS_ScopeFoundry\laser_hardware.py", line 35, in connect
+    self.laser = LaserDevice(port=self.port.val, debug=self.debug_mode.val)
+  File "C:\LabPrograms\Python\OBIS_ScopeFoundry\laser_device.py", line 14, in __init__
+    self.ser = ser = serial.Serial(port=self.port, baudrate=921600,
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\serial\serialwin32.py", line 31, in __init__
+    super(Serial, self).__init__(*args, **kwargs)
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\serial\serialutil.py", line 240, in __init__
+    self.open()
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\serial\serialwin32.py", line 62, in open
+    raise SerialException("could not open port {!r}: {!r}".format(self.portstr, ctypes.WinError()))
+serial.serialutil.SerialException: could not open port 'COM7': PermissionError(13, 'Accesso negato.', None, 5)
+
+2021-10-29T16:15:25|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\measurement.py", line 25, in run
+    self.measurement._thread_run()
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\measurement.py", line 179, in _thread_run
+    self.run()
+  File "C:\LabPrograms\Python\Hamamatsu_ScopeFoundry\CameraMeasurement.py", line 175, in run
+    self.get_and_save_Frame(j,last_frame_index)
+  File "C:\LabPrograms\Python\Hamamatsu_ScopeFoundry\CameraMeasurement.py", line 253, in get_and_save_Frame
+    self.image_h5[saveindex,:,:] = self.image # saving to the h5 dataset
+  File "h5py\_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py\_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\h5py\_hl\dataset.py", line 685, in __setitem__
+    selection = sel.select(self.shape, args, dsid=self.id)
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\h5py\_hl\selections.py", line 94, in select
+    sel[args]
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\h5py\_hl\selections.py", line 261, in __getitem__
+    start, count, step, scalar = _handle_simple(self.shape,args)
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\h5py\_hl\selections.py", line 466, in _handle_simple
+    x,y,z = _translate_int(int(arg), length)
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\h5py\_hl\selections.py", line 486, in _translate_int
+    raise ValueError("Index (%s) out of range (0-%s)" % (exp, length-1))
+ValueError: Index (10) out of range (0-9)
+
+2021-10-29T17:07:42|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\LabPrograms\Python\Hamamatsu_ScopeFoundry\CameraMeasurement.py", line 175, in run
+    self.get_and_save_Frame(j,last_frame_index)
+  File "C:\LabPrograms\Python\Hamamatsu_ScopeFoundry\CameraMeasurement.py", line 253, in get_and_save_Frame
+    self.image_h5[saveindex,:,:] = self.image # saving to the h5 dataset
+  File "h5py\_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py\_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\h5py\_hl\dataset.py", line 708, in __setitem__
+    self.id.write(mspace, fspace, val, mtype, dxpl=self._dxpl)
+  File "h5py\_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py\_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py\h5d.pyx", line 222, in h5py.h5d.DatasetID.write
+  File "h5py\_proxy.pyx", line 132, in h5py._proxy.dset_rw
+  File "h5py\_proxy.pyx", line 93, in h5py._proxy.H5PY_H5Dwrite
+OSError: Can't write data (file write failed: time = Fri Oct 29 17:07:39 2021
+, filename = 'D:/Data/PROCHIP/211029_water test/cell\211029_170735_hamamatsu_measurement.h5', file descriptor = 6, errno = 28, error message = 'No space left on device', buf = 000001C789B53048, total write size = 8388608, bytes this sub-write = 8388608, bytes actually written = 18446744073709551615, offset = 1367409200)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\measurement.py", line 25, in run
+    self.measurement._thread_run()
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\measurement.py", line 179, in _thread_run
+    self.run()
+  File "C:\LabPrograms\Python\Hamamatsu_ScopeFoundry\CameraMeasurement.py", line 201, in run
+    self.h5file.close() # close h5 file
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\h5py\_hl\files.py", line 443, in close
+    h5i.dec_ref(id_)
+  File "h5py\_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py\_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py\h5i.pyx", line 150, in h5py.h5i.dec_ref
+RuntimeError: Can't decrement id ref count (unable to extend file properly)
+

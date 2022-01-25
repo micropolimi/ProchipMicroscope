@@ -1,0 +1,81 @@
+2021-12-20T09:36:06|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\hardware.py", line 208, in enable_connection
+    raise err
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\hardware.py", line 204, in enable_connection
+    self.connect()
+  File "C:\LabPrograms\Python\OBIS_ScopeFoundry\laser_hardware.py", line 35, in connect
+    self.laser = LaserDevice(port=self.port.val, debug=self.debug_mode.val)
+  File "C:\LabPrograms\Python\OBIS_ScopeFoundry\laser_device.py", line 14, in __init__
+    self.ser = ser = serial.Serial(port=self.port, baudrate=921600,
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\serial\serialwin32.py", line 31, in __init__
+    super(Serial, self).__init__(*args, **kwargs)
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\serial\serialutil.py", line 240, in __init__
+    self.open()
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\serial\serialwin32.py", line 62, in open
+    raise SerialException("could not open port {!r}: {!r}".format(self.portstr, ctypes.WinError()))
+serial.serialutil.SerialException: could not open port 'COM6': PermissionError(13, 'Accesso negato.', None, 5)
+
+2021-12-20T09:36:06|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\hardware.py", line 208, in enable_connection
+    raise err
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\hardware.py", line 204, in enable_connection
+    self.connect()
+  File "C:\LabPrograms\Python\OBIS_ScopeFoundry\laser_hardware.py", line 35, in connect
+    self.laser = LaserDevice(port=self.port.val, debug=self.debug_mode.val)
+  File "C:\LabPrograms\Python\OBIS_ScopeFoundry\laser_device.py", line 14, in __init__
+    self.ser = ser = serial.Serial(port=self.port, baudrate=921600,
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\serial\serialwin32.py", line 31, in __init__
+    super(Serial, self).__init__(*args, **kwargs)
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\serial\serialutil.py", line 240, in __init__
+    self.open()
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\serial\serialwin32.py", line 62, in open
+    raise SerialException("could not open port {!r}: {!r}".format(self.portstr, ctypes.WinError()))
+serial.serialutil.SerialException: could not open port 'COM7': FileNotFoundError(2, 'Impossibile trovare il file specificato.', None, 2)
+
+2021-12-20T09:36:44|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\hardware.py", line 208, in enable_connection
+    raise err
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\hardware.py", line 204, in enable_connection
+    self.connect()
+  File "C:\LabPrograms\Python\OBIS_ScopeFoundry\laser_hardware.py", line 35, in connect
+    self.laser = LaserDevice(port=self.port.val, debug=self.debug_mode.val)
+  File "C:\LabPrograms\Python\OBIS_ScopeFoundry\laser_device.py", line 14, in __init__
+    self.ser = ser = serial.Serial(port=self.port, baudrate=921600,
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\serial\serialwin32.py", line 31, in __init__
+    super(Serial, self).__init__(*args, **kwargs)
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\serial\serialutil.py", line 240, in __init__
+    self.open()
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\serial\serialwin32.py", line 62, in open
+    raise SerialException("could not open port {!r}: {!r}".format(self.portstr, ctypes.WinError()))
+serial.serialutil.SerialException: could not open port 'COM6': PermissionError(13, 'Accesso negato.', None, 5)
+
+2021-12-20T10:08:27|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\hardware.py", line 208, in enable_connection
+    raise err
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\hardware.py", line 204, in enable_connection
+    self.connect()
+  File "C:\LabPrograms\Python\OBIS_ScopeFoundry\laser_hardware.py", line 35, in connect
+    self.laser = LaserDevice(port=self.port.val, debug=self.debug_mode.val)
+  File "C:\LabPrograms\Python\OBIS_ScopeFoundry\laser_device.py", line 14, in __init__
+    self.ser = ser = serial.Serial(port=self.port, baudrate=921600,
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\serial\serialwin32.py", line 31, in __init__
+    super(Serial, self).__init__(*args, **kwargs)
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\serial\serialutil.py", line 240, in __init__
+    self.open()
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\serial\serialwin32.py", line 62, in open
+    raise SerialException("could not open port {!r}: {!r}".format(self.portstr, ctypes.WinError()))
+serial.serialutil.SerialException: could not open port 'COM6': PermissionError(13, 'Accesso negato.', None, 5)
+
+2021-12-20T16:28:42|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\measurement.py", line 25, in run
+    self.measurement._thread_run()
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\measurement.py", line 179, in _thread_run
+    self.run()
+  File "C:\LabPrograms\Python\Hamamatsu_ScopeFoundry\CameraMeasurement.py", line 148, in run
+    [frame, dims] = self.camera.hamamatsu.getLastFrame()
+  File "C:\LabPrograms\Python\Hamamatsu_ScopeFoundry\CameraDevice.py", line 1199, in getLastFrame
+    hc_data.copyData(paramlock.buf)
+  File "C:\LabPrograms\Python\Hamamatsu_ScopeFoundry\CameraDevice.py", line 309, in copyData
+    ctypes.memmove(self.np_array.ctypes.data, address, self.size) #copies self.size bytes from address into self.np_array.ctyps.data
+OSError: exception: access violation reading 0x0000000000000000
+

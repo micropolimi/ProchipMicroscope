@@ -1,4 +1,4 @@
-2021-05-27T10:33:15|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+2021-10-11T11:03:51|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
   File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\hardware.py", line 208, in enable_connection
     raise err
   File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\hardware.py", line 204, in enable_connection
@@ -9,7 +9,7 @@
     raise DCAMException("DCAM initialization failed with error code " + str(error_code))
 Hamamatsu_ScopeFoundry.CameraDevice.DCAMException: DCAM initialization failed with error code -2147483130
 
-2021-05-27T10:33:16|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+2021-10-11T11:03:53|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
   File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\hardware.py", line 208, in enable_connection
     raise err
   File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\hardware.py", line 204, in enable_connection
@@ -26,7 +26,7 @@ Hamamatsu_ScopeFoundry.CameraDevice.DCAMException: DCAM initialization failed wi
     raise SerialException("could not open port {!r}: {!r}".format(self.portstr, ctypes.WinError()))
 serial.serialutil.SerialException: could not open port 'COM6': PermissionError(13, 'Accesso negato.', None, 5)
 
-2021-05-27T10:33:17|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+2021-10-11T11:03:54|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
   File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\hardware.py", line 208, in enable_connection
     raise err
   File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\hardware.py", line 204, in enable_connection
@@ -42,4 +42,44 @@ serial.serialutil.SerialException: could not open port 'COM6': PermissionError(1
   File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\serial\serialwin32.py", line 62, in open
     raise SerialException("could not open port {!r}: {!r}".format(self.portstr, ctypes.WinError()))
 serial.serialutil.SerialException: could not open port 'COM7': FileNotFoundError(2, 'Impossibile trovare il file specificato.', None, 2)
+
+2021-10-11T11:23:41|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\LabPrograms\Python\PROCHIP_Microscope\PROCHIP_Measurement_SIM.py", line 160, in run
+    self.start_triggered_Acquisition(freq1)
+  File "C:\LabPrograms\Python\PROCHIP_Microscope\PROCHIP_Measurement_SIM.py", line 422, in start_triggered_Acquisition
+    self.camera.hamamatsu.startAcquisition()
+AttributeError: 'HamamatsuHardware' object has no attribute 'hamamatsu'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\measurement.py", line 25, in run
+    self.measurement._thread_run()
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\measurement.py", line 179, in _thread_run
+    self.run()
+  File "C:\LabPrograms\Python\PROCHIP_Microscope\PROCHIP_Measurement_SIM.py", line 276, in run
+    self.stop_triggered_Acquisition()
+  File "C:\LabPrograms\Python\PROCHIP_Microscope\PROCHIP_Measurement_SIM.py", line 456, in stop_triggered_Acquisition
+    self.camera.hamamatsu.stopAcquisition()
+AttributeError: 'HamamatsuHardware' object has no attribute 'hamamatsu'
+
+2021-10-11T11:24:58|CRITICAL|root|Unhandled exception:Traceback (most recent call last):
+  File "C:\LabPrograms\Python\PROCHIP_Microscope\PROCHIP_Measurement_SIM.py", line 160, in run
+    self.start_triggered_Acquisition(freq1)
+  File "C:\LabPrograms\Python\PROCHIP_Microscope\PROCHIP_Measurement_SIM.py", line 422, in start_triggered_Acquisition
+    self.camera.hamamatsu.startAcquisition()
+AttributeError: 'HamamatsuHardware' object has no attribute 'hamamatsu'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\measurement.py", line 25, in run
+    self.measurement._thread_run()
+  File "C:\Users\Admin\anaconda3\envs\scopefoundry\lib\site-packages\ScopeFoundry\measurement.py", line 179, in _thread_run
+    self.run()
+  File "C:\LabPrograms\Python\PROCHIP_Microscope\PROCHIP_Measurement_SIM.py", line 276, in run
+    self.stop_triggered_Acquisition()
+  File "C:\LabPrograms\Python\PROCHIP_Microscope\PROCHIP_Measurement_SIM.py", line 456, in stop_triggered_Acquisition
+    self.camera.hamamatsu.stopAcquisition()
+AttributeError: 'HamamatsuHardware' object has no attribute 'hamamatsu'
 
